@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "es6",
+      "esnext",
+      "dom"
+    ],
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "outDir": "./tmp/ts",
+    "strict": true,
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+    },
+    "allowSyntheticDefaultImports": true,
+    "keyofStringsOnly": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node_modules/**/*"
+  ]
+}
