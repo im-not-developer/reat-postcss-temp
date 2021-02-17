@@ -1,57 +1,18 @@
-.pg_main,
-.App,
-.App-logo,
-.App-header,
-.App-link {
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  color: var(--primary-text-color);
-  font-size: var(--font-size);
-  font-family: var(--font-family);
-  background-color: var(--body-background-color);
-}
-:root, .light-mode {
-  --button-active: linear-gradient(0deg, rgba(0,0,0, 0.1), rgba(0,0,0, 0.1)), var(--primary-cta-color);
-  --navbar-text-color: var(--primary-text-color);
-  --table-text-color: var(--secondary-text-color);
-  --background-dropdown-open-text: var(--header-background-color);
-  --email-form-bg: var(--body-background-color);
-
-  /* Wallets */
-  --wallets-item-bg: var(--body-background-color);
-  --wallets-item-bg-active: var(--dropdown-background-color);
-  --wallets-item-bg-hover: linear-gradient(0deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0.1)), var(--dropdown-background-color);
-
-  /* ToolBar */
-  --trading-header-selector-title: var(--secondary-text-color);
-  --trading-header-list-background: var(--trading-header-background);
-  --trading-header-fastsearch-button-color-active: var(--primary-text-color);
-
-  /* Tradingview */
-  --trading-view-background: var(--body-background-color);
-}
-/* custom fonts */
-.pg_main {
-  width: 100%;
-  min-width: 1900px;
-  max-width: 1900px;
-  background-color: red;
-  margin: 100px;
-  padding: 0;
-}
 .App {
   text-align: center;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -62,9 +23,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App-link {
   color: #61dafb;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

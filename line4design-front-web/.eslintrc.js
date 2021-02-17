@@ -1,80 +1,52 @@
+// module.exports =  {
+//   root: true,
+//   parser:  '@typescript-eslint/parser', 
+//   extends:  [
+//       'plugin:@typescript-eslint/recommended', 
+//       'prettier/@typescript-eslint', 
+//       'plugin:prettier/recommended',
+//   ],
+//   parserOptions:  {
+//     ecmaVersion:  2018,
+//     sourceType:  'module', 
+//     ecmaFeatures:  {
+//       jsx:  true,  
+//     },
+//   },
+//   rules:  {
+//     "prettier/prettier": [
+//       "error",
+//       {
+//         "endOfLine": "auto",
+//         "singleQuote": true 
+//       },
+//     ],
+//   },
+//   settings:  {
+    
+//   },
+// };
+
 module.exports = {
   root: true,
-  extends: [
-    'plugin:import/errors',
-    'plugin:import/warnings',
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
-  rules: {
-    'max-len': [
-      'error',
-      100,
-      2,
-      {
-        ignoreUrls: true,
-        ignoreComments: false,
-        ignoreRegExpLiterals: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-      },
-    ],
-    'no-unused-vars': [
-      'warn',
-      {varsIgnorePattern: '^_', argsIgnorePattern: '^_'},
-    ],
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      {varsIgnorePattern: '^_', argsIgnorePattern: '^_'},
-    ],
-    'import/order': [
-      'warn',
-      {
-        'newlines-between': 'always',
-        pathGroups: [
-          {
-            pattern: '~/**',
-            group: 'parent',
-            position: 'before',
-          },
-        ],
-      },
-    ],
-    'import/newline-after-import': ['warn'],
-    'react/jsx-no-undef': ['error', {allowGlobals: true}],
-    'import/no-unresolved': [
-      'error',
-      {
-        ignore: ['@env'],
-      },
-    ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      'babel-module': {},
-      typescript: {
-        alwaysTryTypes: true,
-      },
-      node: {
-        extensions: [
-          '.android.js',
-          '.ios.js',
-          '.native.js',
-          '.web.js',
-          '.js',
-          '.android.ts',
-          '.android.tsx',
-          '.ios.ts',
-          '.ios.tsx',
-          '.native.ts',
-          '.native.tsx',
-          '.web.ts',
-          '.web.tsx',
-          '.ts',
-          '.tsx',
-        ],
-      },
-    },
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "react/jsx-uses-vars": "error"
   },
-};
+  "ignorePatterns": ["*.config.js"]
+}
+

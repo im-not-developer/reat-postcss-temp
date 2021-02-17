@@ -1,7 +1,0 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from './src/App';
-import {name, displayName} from './name.json';
-
-
-ReactDOM.render(<Root />, document.getElementById('root'));

@@ -4,12 +4,15 @@ interface Props {
   
 }
 
-const MainPage = (props: Props) => {
+const MainPage: React.FC = () => {
+  const dd = 1;
+  const aa = null;
   return (
-    <div className="pg_main ">
-      ddddadwqe
+    <div>
+      {dd}
+      {aa ?? 2}
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;
