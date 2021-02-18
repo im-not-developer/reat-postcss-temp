@@ -5,13 +5,12 @@ import React, {useState} from 'react';
 const MainPage: React.FC = () => {
   const [a, setA] = useState('a');
 
-  return <div className="pg_main">{a}
-
-
-
-
-  
-  <span>dddoqwepq</span></div>;
+  return (
+    <div className="pg-main">
+      {a}
+      <span>dddoqwepq</span>
+    </div>
+  );
 };
 
 export default MainPage;
