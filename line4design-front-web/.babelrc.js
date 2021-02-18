@@ -10,7 +10,7 @@ const config = {
     [ 'module-resolver',
       {
         // alias: {
-        {
+        // {
           rootPathPrefix: '~',
           rootPathSuffix: 'src'
           // '~': './src',
