@@ -1,19 +1,3 @@
-// {
-//   "plugins": [
-//     "babel/plugin-syntax-dynamic-import",
-//     "babel-plugin-styled-components",
-//     "babel/plugin-proposal-nullish-coalescing-operator",
-//     "babel/plugin-proposal-optional-chaining",
-//     [
-//       "module-resolver",
-//       {
-//         "alias": {
-//           "~": "./src"
-//         }
-//       }
-//     ]
-//   ]
-// }
 const process = require('process');
 const COMMON_PLUGINS = [
   'babel-plugin-styled-components',
@@ -23,18 +7,21 @@ const COMMON_PLUGINS = [
 ];
 const config = {
   plugins: [
-    [ require.resolve('babel-plugin-module-resolver'),
+    [ 'module-resolver',
       {
-        alias: {
-          '~': './src/',
+        // alias: {
+        {
+          rootPathPrefix: '~',
+          rootPathSuffix: 'src'
+          // '~': './src',
         },
-      },
+      // },
     ],
     ...COMMON_PLUGINS,
   ],
 };
 module.exports = () => {
-  if (process.env.PLATFORM === 'web') {
+  // if (process.env.PLATFORM === 'web') {
     return config;
-  }
+  // }
 };

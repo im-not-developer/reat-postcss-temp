@@ -1,16 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react';
 
-interface Props {
-  
-}
+interface Props {}
 
 const MainPage: React.FC = () => {
-  const dd = 1;
-  const aa = null;
+
+  const {a, setA} = useState('a')
+
   return (
     <div>
-      {dd}
-      {aa ?? 2}
+      {a}
     </div>
   );
 };
