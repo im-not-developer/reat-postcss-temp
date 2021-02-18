@@ -1,16 +1,17 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 
-interface Props {}
+// interface Props {}
 
 const MainPage: React.FC = () => {
+  const [a, setA] = useState('a');
 
-  const {a, setA} = useState('a')
+  return <div className="pg_main">{a}
 
-  return (
-    <div>
-      {a}
-    </div>
-  );
+
+
+
+  
+  <span>dddoqwepq</span></div>;
 };
 
 export default MainPage;
