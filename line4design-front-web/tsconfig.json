@@ -25,8 +25,7 @@
     "./src"
   ],
   "exclude": [
-    "./node_modules",
-    "./src/*.test.*"
+    "./node_modules"
   ],
   "extends": "./tsconfig.paths.json"
 }
