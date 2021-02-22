@@ -1,16 +1,18 @@
-import React from 'react';
-import './App.css';
-import MainPage from 'src/pages/MainPage';
+import React from "react";
+import "./App.css";
+import MainPage from "src/pages/MainPage";
 
 function App() {
   return (
-    <div>
-      <MainPage />  
-      <MainPage />  
-      <MainPage />  
-      <MainPage />  
-      <MainPage />  
-    </div>
+    <React.Fragment>
+      <div>
+        <MainPage />
+        <MainPage />
+        <MainPage />
+        <MainPage />
+        <MainPage />
+      </div>
+    </React.Fragment>
   );
 }
 

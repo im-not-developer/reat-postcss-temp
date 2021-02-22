@@ -8,8 +8,9 @@ module.exports = {
     "prettier/@typescript-eslint",
     "plugin:import/errors",
     "plugin:import/warnings"
+    "plugin:css-modules/recommended"
   ],
-  plugins: ["react", "@typescript-eslint", "prettier"],
+  plugins: ["react", "@typescript-eslint", "prettier",  "css-modules"],
   parserOptions: {
     ecmaVersion: 6,
     ecmaFeatures: {
@@ -20,6 +21,8 @@ module.exports = {
     // 'react/jsx-uses-vars': 'error',
     // '@typescript-eslint/no-var-requires': 0,
     // '@typescript-eslint/no-empty-interface': 'off',
+    "css-modules/no-unused-class": [2, { "camelCase": true }],
+    "css-modules/no-undef-class": [2, { "camelCase": true }],
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
