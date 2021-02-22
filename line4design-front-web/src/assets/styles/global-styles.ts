@@ -5,14 +5,14 @@ export const GlobalStyle = createGlobalStyle`
   ${normalize}
 
   html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
 
-body {
-  margin: 0;
-}
+  body {
+    margin: 0;
+  }
 
 article,
 aside,
