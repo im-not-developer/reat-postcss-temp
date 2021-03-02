@@ -5,18 +5,20 @@
     }
   ],
   "settings": {
-    "files.autoSave": "onFocusChange",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-    },
-    "editor.formatOnSave": false,
-    "javascript.validate.enable": false,
     "files.associations": {
       "*.css": "postcss"
     },
     "eslint.options": {
       "extensions": [".html", ".js",".jsx",".ts", ".tsx"]
     },
+    "files.autoSave": "off", 
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll.eslint": true,
+    },
+    "javascript.validate.enable": false,
+    
     "eslint.validate": [
       "javascript",
       "javascriptreact",
@@ -61,13 +63,12 @@
     "editor.minimap.enabled": false,
     "javascript.format.enable": false,
     "window.zoomLevel": 0,
-
     "search.exclude": {
       "**/node_modules": true,
       "**/bower_components": true,
-      "**/*.code-search": true,
-      "**/migrations/*.py": true
     },
+    "eslint.format.enable": true,
+    "eslint.autoFixOnSave": true,
   },
   "tasks": {
     // See https://go.microsoft.com/fwlink/?LinkId=733558

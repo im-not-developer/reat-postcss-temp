@@ -1,17 +1,15 @@
-import React from "react";
+/** @format */
+
+import React from 'react';
 
 // interface Props {
 
 // }
 
 const Header: React.FC = () => {
-const testDacp=()=>{
-  console.log('123lj12')
-}
   return (
     <div className="commons-header">
       <div className="commons-header_contents">
-    
         <span>dddd</span>
       </div>
     </div>
@@ -19,4 +17,3 @@ const testDacp=()=>{
 };
 
 export default Header;
-
