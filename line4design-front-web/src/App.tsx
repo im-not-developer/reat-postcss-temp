@@ -2,18 +2,16 @@ import React from "react";
 
 import "./App.css";
 import MainPage from "src/pages/MainPage";
+import Header from "src/components/commons/Header";
 
 function App() {
   return (
-    <React.Fragment>
-      <div>
-        <MainPage />
-        <MainPage />
-        <MainPage />
-        <MainPage />
-        <MainPage />
-      </div>
-    </React.Fragment>
+    <>      
+    <Header />
+    <div className="pg_app">
+      <MainPage />
+    </div>
+    </>
   );
 }
 
