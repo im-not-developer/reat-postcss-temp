@@ -2,12 +2,9 @@
 {
   "compilerOptions": {
     "outDir": "./tmp/ts",
-    "baseUrl": "./",  
+    "baseUrl": ".",  
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["src/*"]
     },  
   },
-  "include": [
-    "src"
-  ]
 }

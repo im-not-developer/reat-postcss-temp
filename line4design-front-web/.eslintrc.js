@@ -89,7 +89,6 @@ module.exports = {
         alwaysTryTypes: true
       },
       node: {
-        // moduleDirectory: ['node_modules', 'src'],
         extensions: ['.ts', '.tsx']
       }
     }
