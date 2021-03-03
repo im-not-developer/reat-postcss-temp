@@ -3,8 +3,8 @@
   "compilerOptions": {
     "outDir": "./tmp/ts",
     "baseUrl": ".",  
-    "paths": {
-      "~/*": ["src/*"]
-    },  
+    // "paths": {
+    //   "~/*": ["src/*"]
+    // },  
   },
 }
