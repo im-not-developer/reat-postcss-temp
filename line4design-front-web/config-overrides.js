@@ -13,7 +13,7 @@ module.exports = override(
   useBabelRc(),
 
   addWebpackAlias({
-    ['~']: path.resolve(__dirname, 'src')
+    ['~']: path.resolve(__dirname, './src')
   }),
   addBundleVisualizer(
     {
