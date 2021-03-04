@@ -3,7 +3,7 @@
 import React from 'react';
 
 // import Header from '~/components/commons/Header';
-// import MainPage from '~/pages/MainPage';
+import MainPage from '~/pages/MainPage';
 
 // import { useTranslation } from 'react-i18next';
 // import { Languages, languages } from 'src/locales/i18n';
@@ -20,9 +20,10 @@ function App() {
   return (
     <>
       <div>ddd</div>
+      <MainPage />
       {/* <Header />
       <div className="pg_app">
-        <MainPage />
+
       </div> */}
       {/* <div>
         <p>{t('hello')}</p>

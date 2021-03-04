@@ -12,7 +12,8 @@ module.exports = {
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript'
   ],
   plugins: ['react', '@typescript-eslint', 'prettier', 'css-modules'],
 
@@ -26,6 +27,7 @@ module.exports = {
     // 'react/jsx-uses-vars': 'error',
     // "postcss-modules/no-undef-class": "error",
     // "postcss-modules/no-unused-class": "warn",
+    'import/no-cycle': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     'css-modules/no-unused-class': [2, { camelCase: true }],
@@ -34,7 +36,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-
     'max-len': [
       'error',
       100,
@@ -86,7 +87,11 @@ module.exports = {
     'import/resolver': {
       'babel-module': {},
       typescript: {
-        alwaysTryTypes: true
+        alwaysTryTypes: true,
+        directory: [
+          './packages/*/tsconfig.json',
+          './other-packages/*/tsconfig.json'
+        ]
       },
       node: {
         extensions: ['.ts', '.tsx']

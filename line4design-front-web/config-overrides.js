@@ -1,20 +1,20 @@
 /** @format */
 
-const path = require('path');
+// const path = require('path');
 
 const {
   override,
   useBabelRc,
-  addWebpackAlias,
+  // addWebpackAlias,
   addBundleVisualizer
 } = require('customize-cra');
 
 module.exports = override(
   useBabelRc(),
 
-  addWebpackAlias({
-    ['~']: path.resolve(__dirname, './src')
-  }),
+  // addWebpackAlias({
+  //   ['~']: path.resolve(__dirname, './src')
+  // }),
   addBundleVisualizer(
     {
       analyzerMode: 'static',
