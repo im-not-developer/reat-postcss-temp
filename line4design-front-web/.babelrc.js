@@ -10,7 +10,17 @@ const COMMON_PLUGINS = [
   '@babel/plugin-proposal-optional-chaining'
 ];
 const config = {
-  plugins: [...COMMON_PLUGINS]
+  plugins: [
+    [
+      'module-resolver',
+      {
+        alias: {
+          '~': './src'
+        }
+      }
+    ],
+    ...COMMON_PLUGINS
+  ]
 };
 module.exports = () => {
   if (process.env.PLATFORM === 'dev') {

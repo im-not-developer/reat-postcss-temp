@@ -12,6 +12,8 @@
       "ESNext",
       "esnext"
     ],
+    "baseUrl": ".",
+    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -26,13 +28,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "extends": "./tsconfig.paths.json",
-  "include": [
-    "src",
-    "src/assets/*",
-    "src/**/*"
-  ],
-  "exclude": [
-    "./node_modules"
-  ]
+  "extends": "./tsconfig.paths.json"
 }

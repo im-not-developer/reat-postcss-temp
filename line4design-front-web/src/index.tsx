@@ -3,15 +3,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { GlobalStyle } from '~/assets/styles/global-styles';
-
+// import { GlobalStyle } from '~/assets/styles/global-styles';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
+    {/* <GlobalStyle /> */}
     <App />
   </React.StrictMode>,
   document.getElementById('root')
