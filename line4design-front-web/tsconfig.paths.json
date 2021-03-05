@@ -1,14 +1,15 @@
 // src/tsconfig.paths.json
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "./tmp/ts",
-
     "paths": {
-      "~": ["./src/*"]
+      "~/*": ["./src/app/*"]
     },  
   },
   "include": [
     "src",
+    "app"
   ],
   "exclude": [
     "./node_modules"

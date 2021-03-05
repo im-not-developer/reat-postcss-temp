@@ -12,7 +12,6 @@
       "ESNext",
       "esnext"
     ],
-    "baseUrl": ".",
     "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
