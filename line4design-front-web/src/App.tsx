@@ -21,20 +21,24 @@ function App() {
     <>
       <div>ddd</div>
       <MainPage />
-      {/* <Header />
+    </>
+  );
+}
+
+{
+  /* <Header />
       <div className="pg_app">
 
-      </div> */}
-      {/* <div>
+      </div> */
+}
+{
+  /* <div>
         <p>{t('hello')}</p>
         {languages.map(lang => (
           <button key={lang} onClick={() => handleChangeLanguage(lang)}>
             {t(`language_${lang}`)}
           </button>
         ))}
-      </div> */}
-    </>
-  );
+      </div> */
 }
-
 export default App;

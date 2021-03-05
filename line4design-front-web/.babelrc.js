@@ -15,7 +15,7 @@ const config = {
       'module-resolver',
       {
         alias: {
-          '~': './src'
+          '~/*': './src/app'
         }
       }
     ],
