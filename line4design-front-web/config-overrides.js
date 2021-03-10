@@ -6,18 +6,20 @@ const {
   override,
   useBabelRc,
   addWebpackAlias,
-  addBundleVisualizer
+  addBundleVisualizer,
+  addBabelPlugin
   // addDecoratorsLegacy,
   // disableEsLint
 } = require('customize-cra');
 
 module.exports = override(
   useBabelRc(),
-  // // enable legacy decorators babel plugin
-  // addDecoratorsLegacy(),
+  // ...addBabelPresets('@babel/preset-env', '@babel/preset-react'),
+  addBabelPlugin([
+    '@babel/plugin-transform-typescript',
+    { allowNamespaces: true }
+  ]),
 
-  // // disable eslint in webpack
-  // disableEsLint(),
   addWebpackAlias({
     ['~']: path.resolve(__dirname, 'src')
   }),
