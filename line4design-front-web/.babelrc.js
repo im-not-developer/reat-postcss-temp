@@ -12,7 +12,5 @@ const config = {
 };
 
 module.exports = () => {
-  if (process.env.PLATFORM === 'dev') {
-    return config;
-  }
+  return config;
 };
