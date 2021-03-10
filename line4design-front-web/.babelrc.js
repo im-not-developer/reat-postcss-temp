@@ -1,6 +1,4 @@
 /** @format */
-
-// /** @format */
 const process = require('process');
 
 const COMMON_PLUGINS = [
@@ -10,18 +8,9 @@ const COMMON_PLUGINS = [
   '@babel/plugin-proposal-optional-chaining'
 ];
 const config = {
-  plugins: [
-    [
-      'module-resolver',
-      {
-        alias: {
-          '~/*': './src/app'
-        }
-      }
-    ],
-    ...COMMON_PLUGINS
-  ]
+  plugins: [...COMMON_PLUGINS]
 };
+
 module.exports = () => {
   if (process.env.PLATFORM === 'dev') {
     return config;
