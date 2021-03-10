@@ -2,8 +2,10 @@
 
 import React from 'react';
 
+import MainPages from './pages/MainPages';
+
+const path = require('path');
 // import Header from '~/components/commons/Header';
-import MainPage from '~/pages/MainPage';
 
 // import { useTranslation } from 'react-i18next';
 // import { Languages, languages } from 'src/locales/i18n';
@@ -16,11 +18,11 @@ function App() {
   // const handleChangeLanguage = (lang: Languages) => {
   //   i18n.changeLanguage(lang);
   // };
-
+  console.log(path.resolve(__dirname, 'src'));
   return (
     <>
       <div>ddd</div>
-      <MainPage />
+      <MainPages />
     </>
   );
 }
