@@ -1,10 +1,10 @@
 // src/tsconfig.paths.json
 {
   "compilerOptions": {
-    "baseUrl": "./src/",
+    "baseUrl": "./",
     "outDir": "./tmp/ts",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["src/*"]
     },  
   },
   "include": [
@@ -13,9 +13,4 @@
   "exclude": [
     "./node_modules"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "reportFiles": [
-      "./src/**/*"
-    ]
-  }
 }

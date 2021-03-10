@@ -4,7 +4,6 @@ import React from 'react';
 
 import MainPages from './pages/MainPages';
 
-const path = require('path');
 // import Header from '~/components/commons/Header';
 
 // import { useTranslation } from 'react-i18next';
@@ -18,7 +17,6 @@ function App() {
   // const handleChangeLanguage = (lang: Languages) => {
   //   i18n.changeLanguage(lang);
   // };
-  console.log(path.resolve(__dirname, 'src'));
   return (
     <>
       <div>ddd</div>
