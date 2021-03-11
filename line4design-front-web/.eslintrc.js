@@ -18,6 +18,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier', 'css-modules'],
 
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 6,
     ecmaFeatures: {
       jsx: true
@@ -86,15 +87,13 @@ module.exports = {
     },
     'import/resolver': {
       'babel-module': {},
-      typescript: {
-        alwaysTryTypes: true,
-        directory: [
-          './packages/*/tsconfig.json',
-          './other-packages/*/tsconfig.json'
-        ]
-      },
+      typescript: {},
       node: {
-        extensions: ['.ts', '.tsx']
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
+      },
+      alias: {
+        map: [['~', './src']],
+        extensions: ['.js', '.tsx', '.css', '.pcss']
       }
     }
   }

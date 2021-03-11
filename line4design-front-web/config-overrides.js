@@ -1,29 +1,22 @@
 /** @format */
 
-const path = require('path');
-
+// const path = require('path');
+// const { alias } = require('react-app-rewire-alias');
 const {
   override,
   useBabelRc,
   addWebpackAlias,
-  addBundleVisualizer,
-  addBabelPlugin
+  addBundleVisualizer
+  // addBabelPlugin
   // addDecoratorsLegacy,
   // disableEsLint
 } = require('customize-cra');
 
 module.exports = override(
   useBabelRc(),
-  // ...addBabelPresets('@babel/preset-env', '@babel/preset-react'),
-  addBabelPlugin([
-    '@babel/plugin-transform-typescript',
-    { allowNamespaces: true }
-  ]),
-
   addWebpackAlias({
-    ['~']: path.resolve(__dirname, 'src')
+    ['~']: './src'
   }),
-
   addBundleVisualizer(
     {
       analyzerMode: 'static',
@@ -31,4 +24,7 @@ module.exports = override(
     },
     true
   )
+  // alias({
+  //   '~': 'src'
+  // })
 );
