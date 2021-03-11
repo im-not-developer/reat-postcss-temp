@@ -9,10 +9,35 @@
     "lint:fix": "eslint ./src --fix",
     "start": "npm-run-all -p watch:css start-js",
     "start-mock": "npm-run-all -p watch:css start-js mockAPI mockWS",
-    "start-js": "react-scripts start",
+    "start-js": "NODE_PATH=project/app/src/ && react-scripts start",
     "build-js": "react-app-rewired build --scripts-version react-scripts build",
     "build": "npm-run-all build:css build-js clean:mapfiles",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true,
+        "addWebpackAlias": true
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "preset": "jest-expo",
+    "testMatch": [
+      "**/__tests__/**/*.[tj]s?(x)",
+      "**/?(*.)(spec|test).[tj]s?(x)"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -26,10 +51,10 @@
     "@types/react-i18next": "^8.1.0",
     "@typescript-eslint/parser": "^4.4.1",
     "add": "^2.0.6",
+    "dotenv": "^8.2.0",
     "eslint": "^7.11.0",
     "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-import-resolver-node": "^0.3.4",
-    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-react": "^7.21.4",
@@ -85,6 +110,8 @@
     "eslint": "^7.19.0",
     "eslint-config-postcss": "^4.0.0",
     "eslint-config-prettier": "^7.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",

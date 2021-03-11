@@ -4,8 +4,6 @@ import React from 'react';
 
 import ListComponent from '~/components/ListComponent';
 
-// import ListComponent from '../components/ListComponent';
-
 const MainPages: React.FC = () => {
   return (
     <div>
