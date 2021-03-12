@@ -1,7 +1,6 @@
 /** @format */
 
 import React from 'react';
-
 import ListComponent from '~/components/ListComponent';
 
 const MainPages: React.FC = () => {

@@ -1,10 +1,10 @@
 // src/tsconfig.paths.json
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     // Relative to "baseUrl"
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["./*"]
       // "~/*": ["*", "src/*", "src/**/*", "./src/*"]
     },
   },

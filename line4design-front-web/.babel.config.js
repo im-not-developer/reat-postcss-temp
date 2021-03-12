@@ -12,9 +12,9 @@ const config = {
     [
       'module-resolver',
       {
-        root: ['./'],
+        root: ['.'],
         alias: {
-          '~/*': './src'
+          '~': './src'
         }
       }
     ],
