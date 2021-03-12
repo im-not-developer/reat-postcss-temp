@@ -14,9 +14,9 @@ const {
 
 module.exports = override(
   useBabelRc(),
-  addWebpackAlias({
-    ['~']: './src'
-  }),
+  // addWebpackAlias({
+  //   ['~']: './src'
+  // }),
   addBundleVisualizer(
     {
       analyzerMode: 'static',
