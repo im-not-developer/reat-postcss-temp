@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    // "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types", "./@types"],
-    "paths": {
-      "~/*":["./src/*"]
-    }
+    "baseUrl": "./src",
+    // "paths": {
+    //   "~/*": ["./src/*"]
+    // }
   },
 }
