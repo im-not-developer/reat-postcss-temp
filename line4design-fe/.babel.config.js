@@ -10,11 +10,10 @@ const COMMON_PLUGINS = [
 const config = {
   plugins: [
     [
-      'module-resolver',
+      'babel-plugin-root-import',
       {
-        alias: {
-          '~': './src'
-        }
+        rootPathPrefix: '~',
+        rootPathSuffix: 'src'
       }
     ],
     ...COMMON_PLUGINS
