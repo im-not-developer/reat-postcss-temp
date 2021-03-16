@@ -1,14 +1,15 @@
 /** @format */
 
 import React from 'react';
-
-import HelloComponent from '../components/HelloComponent';
+import ByeComponent from '~/components/ByeComponent';
+import HelloComponent from '~/components/HelloComponent';
 
 const HomePage: React.FC = () => (
   <div className="Home_pg">
     <div>Mainpage Component!</div>
     <div>
       <HelloComponent />
+      <ByeComponent />
     </div>
   </div>
 );

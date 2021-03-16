@@ -1,15 +1,20 @@
 /** @format */
 
 import React from 'react';
-
-import RoutePresenter from './routes/RoutePresenter';
+import { SWRConfig } from 'swr';
+import Line4Design from './Line4Design';
 import GlobalStyle from './styles/GlobalStyles';
 
 const AppPresenter: React.FC = () => (
-  <>
+  <SWRConfig
+    value={{
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+      revalidateOnMount: false,
+    }}>
     <GlobalStyle />
-    <RoutePresenter />
-  </>
+    <Line4Design />
+  </SWRConfig>
 );
 
 export default AppPresenter;
