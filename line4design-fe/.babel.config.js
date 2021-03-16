@@ -5,19 +5,25 @@ const COMMON_PLUGINS = [
   'babel-plugin-styled-components',
   '@babel/plugin-syntax-dynamic-import',
   '@babel/plugin-proposal-nullish-coalescing-operator',
-  '@babel/plugin-proposal-optional-chaining'
+  '@babel/plugin-proposal-optional-chaining',
 ];
 const config = {
   plugins: [
     [
+      'react-intl',
+      {
+        messagesDir: './src/translations',
+      },
+    ],
+    [
       'babel-plugin-root-import',
       {
         rootPathPrefix: '~',
-        rootPathSuffix: 'src'
-      }
+        rootPathSuffix: 'src',
+      },
     ],
-    ...COMMON_PLUGINS
-  ]
+    ...COMMON_PLUGINS,
+  ],
 };
 
 module.exports = () => {
