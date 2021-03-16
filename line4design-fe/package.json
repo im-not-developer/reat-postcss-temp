@@ -28,7 +28,6 @@
     "postcss-cli": "^8.3.1",
     "postcss-hexrgba": "^2.0.1",
     "postcss-import": "^14.0.0",
-    "react-intl": "^5.13.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",

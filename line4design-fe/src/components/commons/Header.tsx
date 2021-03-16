@@ -1,10 +1,7 @@
 /** @format */
 
-import React, { useContext } from 'react';
-import { LocaleContext } from '~/providers/LocaleContext';
+import React from 'react';
 const Header = () => {
-  const [lang, setLang] = useContext(LocaleContext);
-  const nextLocale = lang === 'en' ? 'ko' : 'en';
   return (
     <div className="header_container">
       <div className="header_container__contents">
@@ -38,10 +35,6 @@ const Header = () => {
           </span>
         </div>
       </div>
-
-      <button onClick={() => setLang(nextLocale)}>
-        Change language to {nextLocale}
-      </button>
     </div>
   );
 };

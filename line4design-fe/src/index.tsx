@@ -1,13 +1,9 @@
 /** @format */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { addLocaleData } from 'react-intl';
-import en from 'react-intl/locale-data/en';
 import AppPresenter from './AppPresenter';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
-addLocaleData([...en, ...customLocaleData]);
 
 ReactDOM.render(
   <React.StrictMode>
