@@ -10,12 +10,6 @@ const COMMON_PLUGINS = [
 const config = {
   plugins: [
     [
-      'react-intl',
-      {
-        messagesDir: './src/translations',
-      },
-    ],
-    [
       'babel-plugin-root-import',
       {
         rootPathPrefix: '~',

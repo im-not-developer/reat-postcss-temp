@@ -1,5 +1,5 @@
 /** @format */
 
 export const ko = {
-  hello: `hello`,
+  hello: `안녕하세요`,
 };
