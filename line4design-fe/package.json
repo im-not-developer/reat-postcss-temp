@@ -28,6 +28,7 @@
     "postcss-cli": "^8.3.1",
     "postcss-hexrgba": "^2.0.1",
     "postcss-import": "^14.0.0",
+    "react-intl": "^5.13.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",
@@ -75,6 +76,7 @@
     "react-app-rewire-postcss": "^3.0.2",
     "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
+    "react-intl-translations-manager": "^5.0.3",
     "webpack-bundle-analyzer": "^4.4.0"
   }
 }
