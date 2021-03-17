@@ -30,6 +30,7 @@ const LocaleProvider: FC = ({ children }) => {
   };
 
   const viewTransLang = (key: string) => {
+    // 문자에 대한 랩핑 div
     return t(key);
   };
   return (
