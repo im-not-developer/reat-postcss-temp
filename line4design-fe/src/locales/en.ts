@@ -1,6 +1,5 @@
 /** @format */
 
 export const en = {
-  hello: `hello`,
-  call: `call`,
+  'header.category': `CATEGORY`,
 };

@@ -1,10 +1,32 @@
 /** @format */
 
-import React from 'react';
+import React, { useContext } from 'react';
+import { LocaleContext } from '~/providers/LocaleProvider';
+
 const Header = () => {
+  const { handleChangeLanguage, viewTransLang } = useContext(LocaleContext);
+
   return (
     <div className="header_container">
       <div className="header_container__contents">
+        {/* test */}
+        <div>
+          <button
+            onClick={() => {
+              handleChangeLanguage('ko');
+            }}>
+            ko
+          </button>
+          <button
+            onClick={() => {
+              handleChangeLanguage('en');
+            }}>
+            en
+          </button>
+
+          {viewTransLang('header.category')}
+        </div>
+        {/* test-end */}
         <div>
           <div>LOGO</div>
           <div>
