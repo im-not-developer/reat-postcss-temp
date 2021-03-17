@@ -5,6 +5,7 @@
     }
   ],
   "settings": {
+    "workbench.editor.revealIfOpen": true,
     "files.associations": {
       "*.css": "postcss"
     },

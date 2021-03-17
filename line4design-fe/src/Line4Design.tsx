@@ -1,9 +1,9 @@
 /** @format */
 
 import React from 'react';
+import Footer from './components/commons/Footer';
 import Header from './components/commons/Header';
 import RoutePresenter from './routes/RoutePresenter';
-
 interface Props {}
 
 const Line4Design = (props: Props) => {
@@ -11,15 +11,7 @@ const Line4Design = (props: Props) => {
     <div className="line4Design_pg">
       <Header />
       <RoutePresenter />
-      {/*
-      <div>
-        <p>{t('call')}</p>
-        {languages.map(lang => (
-          <button key={lang} onClick={() => handleChangeLanguage(lang)}>
-            {t(`language_${lang}`)}
-          </button>
-        ))}
-      </div>*/}
+      <Footer />
     </div>
   );
 };

@@ -37,7 +37,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier', 'css-modules'],
   rules: {
     // prop type children 프롭스때문에 에러 발생시 사용
-    // 'react/prop-types': 'off',
+    'react/prop-types': 'off',
     // empty arrow function lint
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': ['error'],

@@ -8,13 +8,13 @@ import { Languages } from '~/locales/i18n';
 export type LocaleContextState = {
   locale: string;
   handleChangeLanguage: (lang: Languages) => void;
-  viewTransLang: (key: string) => void;
+  viewTransLang: (key: string) => string;
 };
 
 const contextDefaultValues: LocaleContextState = {
   locale: 'ko',
   handleChangeLanguage: () => ({}),
-  viewTransLang: () => ({}),
+  viewTransLang: () => '',
 };
 
 export const LocaleContext = createContext<LocaleContextState>(
