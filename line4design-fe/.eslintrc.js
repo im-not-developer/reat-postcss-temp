@@ -7,7 +7,7 @@ module.exports = {
     es6: true,
     node: true,
     commonjs: true,
-    amd: true
+    amd: true,
   },
   parser: '@typescript-eslint/parser',
   extends: [
@@ -17,7 +17,7 @@ module.exports = {
 
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:css-modules/recommended'
+    'plugin:css-modules/recommended',
 
     // 'prettier',
     // 'prettier/react',
@@ -28,14 +28,20 @@ module.exports = {
   parserOptions: {
     useEslintrc: false,
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     // ecmaVersion: 12,
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'css-modules'],
   rules: {
+    // prop type children 프롭스때문에 에러 발생시 사용
+    // 'react/prop-types': 'off',
+    // empty arrow function lint
+    'no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': ['error'],
+
     'import/no-cycle': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
@@ -54,16 +60,16 @@ module.exports = {
         ignoreComments: false,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
+        ignoreTemplateLiterals: true,
+      },
     ],
     'no-unused-vars': [
       'warn',
-      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
+      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
     ],
     '@typescript-eslint/no-unused-vars': [
       'warn',
-      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
+      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
     ],
     'import/order': [
       'warn',
@@ -73,25 +79,25 @@ module.exports = {
           {
             pattern: '~/**',
             group: 'parent',
-            position: 'before'
-          }
-        ]
-      }
+            position: 'before',
+          },
+        ],
+      },
     ],
     'import/newline-after-import': ['warn'],
     'react/jsx-no-undef': ['error', { allowGlobals: true }],
-    'import/no-unresolved': 'off'
+    'import/no-unresolved': 'off',
   },
   settings: {
     'import/resolver': {
       'babel-plugin-root-import': {
         rootPathPrefix: '~',
-        rootPathSuffix: 'src'
+        rootPathSuffix: 'src',
       },
       node: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        moduleDirectory: ['node_modules', 'src/']
-      }
-    }
-  }
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
 };
