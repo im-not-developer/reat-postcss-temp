@@ -1,6 +1,10 @@
 .Home_pg,
 .header_container,
+.footer_container,
+.translang_container,
 .line4Design_pg,
+#root,
+.route,
 .header_container__contents {
   color: var(--primary-text-color);
   font-size: var(--font-size);
@@ -25,9 +29,18 @@
     max-width: 1920px;
 
   }
+.footer_container {
+  width: 100%;
+  background-color: #e9e;
+}
+.translang_container {
+  display: block;
+
+}
 .line4Design_pg {
   width:100%;
   max-width: 1920px;
+  height: 100vh;
   margin: 0px auto;
 
   margin: 0;
@@ -37,27 +50,11 @@
   -moz-osx-font-smoothing: grayscale;
 
 }
-
-/* :root {
-  --font-family: "NanumBarunGothic";
-  --font-weight: normal;
-  --font-size: 12px !important;
-  --font-size-smaller: calc(var(--font-size) * 0.9);
-  --font-size-bigger: calc(var(--font-size) * 1.1);
-  --line-height: 1.2;
-
-  --alert-icon-size: calc(var(--gap) * 3.6);
-  --avatar-alt-height: 30px;
-  --avatar-alt-width: 30px;
-  --avatar-component-width: 50px;
-  --avatar-alt-font-size: 25px;
-  --checkbox-general-intent: 10px;
-  --checkbox-label-font-size: 15px;
-  --checkbox-size: 10px;
-  --checkbox-symbol-size: 10px;
-  --wallets-font-bold: 800;
-
-  --gap: 0.5em;
-  --big-gap: 60px;
-  --border-radius: 5px;
-} */
+#root {
+  display: block;
+  height: 100vh;
+}
+.route {
+  display: block;
+  height: 100vh;
+}

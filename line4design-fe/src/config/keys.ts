@@ -7,7 +7,6 @@ const keyListMap: keyListMapTypes = {
 };
 
 export const getFindKeys = (key: string) => {
-  console.log('key : ', key);
   if (!key) {
     return null;
   }

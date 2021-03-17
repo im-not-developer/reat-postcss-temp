@@ -1,10 +1,10 @@
 /** @format */
 
 import React, { useContext } from 'react';
+import TransLang from '~/components/TransLang';
 import { LocaleContext } from '~/providers/LocaleProvider';
-
 const Header = () => {
-  const { handleChangeLanguage, viewTransLang } = useContext(LocaleContext);
+  const { handleChangeLanguage } = useContext(LocaleContext);
 
   return (
     <div className="header_container">
@@ -24,37 +24,49 @@ const Header = () => {
             en
           </button>
 
-          {viewTransLang('header.category')}
+          {/* {viewTransLang('header.category')} */}
         </div>
         {/* test-end */}
         <div>
           <div>LOGO</div>
           <div>
-            <span>CATEGORY</span>
-            <span>BRAND</span>
+            <TransLang text={'header.category'} />
+            <TransLang text={'header.brand'} />
           </div>
         </div>
 
         <div>
           <input value="input" placeholder="검색" />
           <div>
-            <button> search </button>
+            <button>
+              <TransLang text={'header.search'} />
+            </button>
           </div>
         </div>
 
         <div>
-          <span>
-            <button>LOGIN</button>
-          </span>
-          <span>
-            <button>SIGN IN</button>
-          </span>
-          <span>
-            <button>CONTECT</button>
-          </span>
-          <span>
-            <button>BASKET</button>
-          </span>
+          <ul>
+            <li>
+              <button>
+                <TransLang text={'header.login'} />
+              </button>
+            </li>
+            <li>
+              <button>
+                <TransLang text={'header.signin'} />
+              </button>
+            </li>
+            <li>
+              <button>
+                <TransLang text={'header.service_center'} />
+              </button>
+            </li>
+            <li>
+              <button>
+                <TransLang text={'header.basket'} />
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
