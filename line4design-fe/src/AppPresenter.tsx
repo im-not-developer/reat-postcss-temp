@@ -3,6 +3,7 @@
 import React from 'react';
 import { SWRConfig } from 'swr';
 import Line4Design from './Line4Design';
+import LocaleProvider from './providers/LocaleProvider';
 import GlobalStyle from './styles/GlobalStyles';
 
 const AppPresenter: React.FC = () => {
@@ -13,8 +14,10 @@ const AppPresenter: React.FC = () => {
         revalidateOnReconnect: false,
         revalidateOnMount: false,
       }}>
-      <GlobalStyle />
-      <Line4Design />
+      <LocaleProvider>
+        <GlobalStyle />
+        <Line4Design />
+      </LocaleProvider>
     </SWRConfig>
   );
 };
