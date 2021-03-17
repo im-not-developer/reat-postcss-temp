@@ -2,15 +2,19 @@
 
 import PropTypes from 'prop-types';
 import React, { createContext, FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Languages } from '~/locales/i18n';
 
 export type LocaleContextState = {
   locale: string;
-  changeLocale: (lang: string) => void;
+  handleChangeLanguage: (lang: Languages) => void;
+  viewTransLang: (key: string) => void;
 };
 
 const contextDefaultValues: LocaleContextState = {
-  locale: 'en',
-  changeLocale: () => ({}),
+  locale: 'ko',
+  handleChangeLanguage: () => ({}),
+  viewTransLang: () => ({}),
 };
 
 export const LocaleContext = createContext<LocaleContextState>(
@@ -18,17 +22,22 @@ export const LocaleContext = createContext<LocaleContextState>(
 );
 
 const LocaleProvider: FC = ({ children }) => {
+  const { t, i18n } = useTranslation();
   const [locale, setLocale] = useState<string>(contextDefaultValues.locale);
 
-  const changeLocale = (lang: string) => {
-    setLocale(lang);
+  const handleChangeLanguage = (lang: Languages) => {
+    i18n.changeLanguage(lang);
   };
 
+  const viewTransLang = (key: string) => {
+    return t(key);
+  };
   return (
     <LocaleContext.Provider
       value={{
         locale,
-        changeLocale,
+        handleChangeLanguage,
+        viewTransLang,
       }}>
       {children}
     </LocaleContext.Provider>
