@@ -28,6 +28,7 @@ const ProductCard = (props = productDefaultCard) => {
       <div>
         <div>
           <div style={{ width: '100px' }}>
+            {/* default 찾아서 체크하기 */}
             <img src={require(`~/assets/imgs/sample_img.jpeg`).default} />
           </div>
         </div>
