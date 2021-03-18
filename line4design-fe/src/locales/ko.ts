@@ -8,4 +8,9 @@ export const ko = {
   'header.signin': `회원가입`,
   'header.service_center': `고객센터`,
   'header.basket': `장바구니`,
+
+  'menu_header.home': `홈`,
+  'menu_header.about': `소개`,
+  'menu_header.shop': `매장`,
+  'menu_header.special': `스페셜`,
 };

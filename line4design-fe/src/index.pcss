@@ -4,9 +4,14 @@
 #root {
   display: block;
   height: 100vh;
+
+    /* typography */
+  --font-family: "NanumBarunGothic";
+  --font-weight: 400;
+  --font-size: 14px;
+  --font-size-smaller: calc(var(--font-size) * 0.9);
+  --font-size-bigger: calc(var(--font-size) * 1.1);
+  --line-height: 1.2;
 }
 
-.route {
-  display: block;
-  height: 100vh;
-}
+@media screen and (max-width: 768px) {}

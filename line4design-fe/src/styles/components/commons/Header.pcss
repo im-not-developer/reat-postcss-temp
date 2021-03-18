@@ -1,13 +1,73 @@
-.header_container {
+.header {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 20px;
+  align-items: center;
+  margin: 0 0;
   padding: 0 0;
 
   &__contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: 100%;
-    max-width: 1920px;
+    max-width: 1600px;
+    height: 85px;
+    border: 1px solid var(--red);
 
+    /* left start */
+    &__left {
+      display: flex;
+      flex-direction: row;
+
+      &__logo {
+        width: 100px;
+      }
+
+      &__menu {
+        display:flex;
+        flex-direction: row;
+
+        &__btn {
+          border: 0px;
+          margin: 0 10px;
+          >button {
+            border: 0px;
+            background-color: none;
+          }
+        }
+      }
+    }
+    /* left end */
+    /* center start */
+    &__center {
+
+      &__search {
+        display: flex;
+        flex-direction: row;
+        &__input {
+          width: 300px;
+        }
+
+        &__btn{
+          >button {
+            border: 0px;
+            background-color: none;
+          }
+        }
+      }
+    }
+    /* center end */
+
+    &__right {
+      display: flex;
+      &__menu {
+        display: flex;
+        flex-direction: row;
+        &__btn {
+          margin-right: 10px;
+        }
+      }
+    }
   }
+
 }

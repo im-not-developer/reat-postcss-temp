@@ -5,9 +5,8 @@ import ByeComponent from '~/components/ByeComponent';
 import HelloComponent from '~/components/HelloComponent';
 
 const HomePage: React.FC = () => (
-  <div className="Home_pg">
-    <div>Mainpage Component!</div>
-    <div>
+  <div className="home_pg">
+    <div className="home_pg__contents">
       <HelloComponent />
       <ByeComponent />
     </div>
