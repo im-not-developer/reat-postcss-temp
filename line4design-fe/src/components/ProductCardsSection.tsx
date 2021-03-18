@@ -1,25 +1,20 @@
 /** @format */
 
 import React from 'react';
-
-const list = [
-  {
-    id: 0,
-
-    name: '',
-    price: 0,
-    discount_price: 0,
-  },
-];
+import ProductCard from '~/components/ProductCard';
+import { productListTypes, product_list_items } from '~/utils/product_list';
 interface ProductCardsSectionPropsType {
   title?: string;
+  product_list_items?: productListTypes[];
 }
 
 const ProductCardsSectionProps: ProductCardsSectionPropsType = {
   title: '',
+  product_list_items: [],
 };
 
 const ProductCardsSection = (props = ProductCardsSectionProps) => {
+  console.log(product_list_items);
   return (
     <div className="product_card_section">
       <div className="product_card_section__contents">
@@ -28,7 +23,11 @@ const ProductCardsSection = (props = ProductCardsSectionProps) => {
         </div>
 
         <div className="product_card_section__contents__body">
-          <div></div>
+          <div>
+            {(product_list_items ?? []).map((r, idx) => (
+              <ProductCard key={idx} info={r} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
