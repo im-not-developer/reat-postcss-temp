@@ -6,7 +6,7 @@ interface Props {}
 
 const Footer = (props: Props) => {
   return (
-    <div className="footer_container">
+    <div className="footer">
       <div>
         <div>
           left

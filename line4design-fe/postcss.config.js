@@ -1,5 +1,5 @@
 /** @format */
-module.exports = ctx => {
+module.exports = () => {
   return {
     include: ['node_modules'],
     plugins: [
@@ -10,11 +10,12 @@ module.exports = ctx => {
           color: 'var(--primary-text-color)',
           'font-size': 'var(--font-size)',
           'font-family': 'var(--font-family)',
-          'background-color': 'var(--body-background-color)'
-        }
+          'background-color': 'var(--body-background-color)',
+        },
       }),
       require('postcss-hexrgba'),
-      require('autoprefixer')
-    ]
+      require('autoprefixer'),
+      require('postcss-preset-env'),
+    ],
   };
 };

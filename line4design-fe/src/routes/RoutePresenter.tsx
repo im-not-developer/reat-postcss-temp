@@ -6,14 +6,12 @@ import HomePage from '../pages/HomePage';
 import NotFoundPage from './NotFound/NotFoundPage';
 
 const RoutePresenter: React.FC = () => (
-  <div className="route">
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact={true} component={HomePage} />
-        <Route path="*" component={NotFoundPage} />
-      </Switch>
-    </BrowserRouter>
-  </div>
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact={true} component={HomePage} />
+      <Route path="*" component={NotFoundPage} />
+    </Switch>
+  </BrowserRouter>
 );
 
 export default RoutePresenter;

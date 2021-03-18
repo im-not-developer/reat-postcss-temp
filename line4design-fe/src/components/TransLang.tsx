@@ -8,16 +8,17 @@ export interface PropsType {
   className?: string;
 }
 
-const TransLang = (props: PropsType) => {
-  const { viewTransLang } = useContext(LocaleContext);
-  const { text = '', className = 'translang_container' } = props;
+const defaultProps: PropsType = {
+  text: '',
+  className: 'translang_container',
+};
 
-  console.log(props);
-  // console.log('key : ', text);
+const TransLang = (props = defaultProps) => {
+  const { viewTransLang } = useContext(LocaleContext);
 
   return (
-    <div className={classNames(`${className}`)}>
-      {viewTransLang(text ?? '')}
+    <div className={classNames(`${props.className}`)}>
+      {viewTransLang(props.text ?? '')}
     </div>
   );
 };
