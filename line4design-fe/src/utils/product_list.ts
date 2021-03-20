@@ -20,7 +20,7 @@ export const product_list_items: productListTypes[] = [
     discount_price: 580000,
     discount_percent: 30,
     discount_on: true,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
   {
     id: 1,
@@ -30,7 +30,7 @@ export const product_list_items: productListTypes[] = [
     discount_price: 180000,
     discount_percent: 60,
     discount_on: true,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const product_list_items: productListTypes[] = [
     discount_price: 580000,
     discount_percent: 30,
     discount_on: true,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ export const product_list_items: productListTypes[] = [
     discount_price: 90000,
     discount_percent: 60,
     discount_on: true,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ export const product_list_items: productListTypes[] = [
     discount_price: 0,
     discount_percent: 0,
     discount_on: false,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
   {
     id: 5,
@@ -70,7 +70,7 @@ export const product_list_items: productListTypes[] = [
     discount_price: 0,
     discount_percent: 0,
     discount_on: false,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
   {
     id: 6,
@@ -80,6 +80,6 @@ export const product_list_items: productListTypes[] = [
     discount_price: 0,
     discount_percent: 0,
     discount_on: false,
-    img_link: '~/assets/imgs/sample_img.jpeg',
+    img_link: '../assets/imgs/sample.jpg',
   },
 ];

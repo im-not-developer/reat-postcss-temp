@@ -5,11 +5,15 @@
 .menu_header,
 .translang_container,
 .product_card_section,
+.product_card_slider,
+.product_card,
 .line4Design_pg,
 .home_pg__contents,
 .header__contents,
 .menu_header__contents,
 .product_card_section__contents,
+.product_card__up,
+.product_card__down,
 .line4Design_pg__pages,
 .header__contents__left,
 .header__contents__right,
@@ -169,6 +173,32 @@
 .product_card_section__contents__body {
 
     }
+.product_card_slider {
+  display: flex;
+  flex-direction: row;
+}
+.product_card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  height: 450px;
+  border: 1px solid var(--red);
+  padding: 10px;
+
+
+
+}
+.product_card:hover {
+    cursor: pointer;
+  }
+.product_card__up {
+
+  }
+.product_card__down{
+
+  }
 .line4Design_pg {
   width:100%;
   max-width: 1920px;

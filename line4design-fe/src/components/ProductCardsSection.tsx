@@ -1,8 +1,9 @@
 /** @format */
 
 import React from 'react';
-import ProductCard from '~/components/ProductCard';
+import ProductCardSlider from '~/components/ProductCardSlider';
 import { productListTypes, product_list_items } from '~/utils/product_list';
+
 interface ProductCardsSectionPropsType {
   title?: string;
   product_list_items?: productListTypes[];
@@ -14,7 +15,6 @@ const ProductCardsSectionProps: ProductCardsSectionPropsType = {
 };
 
 const ProductCardsSection = (props = ProductCardsSectionProps) => {
-  console.log(product_list_items);
   return (
     <div className="product_card_section">
       <div className="product_card_section__contents">
@@ -23,11 +23,7 @@ const ProductCardsSection = (props = ProductCardsSectionProps) => {
         </div>
 
         <div className="product_card_section__contents__body">
-          <div>
-            {(product_list_items ?? []).map((r, idx) => (
-              <ProductCard key={idx} info={r} />
-            ))}
-          </div>
+          <ProductCardSlider product_list={product_list_items} />
         </div>
       </div>
     </div>
