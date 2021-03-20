@@ -13,4 +13,7 @@ export const en = {
   'menu_header.about': `ABOUT`,
   'menu_header.shop': `SHOP`,
   'menu_header.special': `SPECIAL`,
+
+  'product_card_slider.new': `NEW`,
+  'product_card_slider.discount': `DISCOUNT`,
 };

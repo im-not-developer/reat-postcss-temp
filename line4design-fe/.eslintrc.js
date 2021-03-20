@@ -41,7 +41,6 @@ module.exports = {
     // empty arrow function lint
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': ['error'],
-
     'import/no-cycle': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-interface': 'off',

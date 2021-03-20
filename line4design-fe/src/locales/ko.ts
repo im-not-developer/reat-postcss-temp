@@ -13,4 +13,8 @@ export const ko = {
   'menu_header.about': `소개`,
   'menu_header.shop': `매장`,
   'menu_header.special': `스페셜`,
+
+  'product_card_slider.new':`신상품`,
+  'product_card_slider.discount':`할인`,
+
 };
