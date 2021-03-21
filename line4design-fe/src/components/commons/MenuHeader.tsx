@@ -1,14 +1,13 @@
 /** @format */
 
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import TransLang from '~/components/TransLang';
+
 interface Props {}
 
 const MenuHeader = (props: Props) => {
-  // const {} =
-  // const handleRouterMove = () => {
-  //   return '';
-  // };
+  const history = useHistory();
 
   return (
     <div className="menu_header">
@@ -19,17 +18,19 @@ const MenuHeader = (props: Props) => {
             <li>
               <div>
                 <button
-                // onClick={() => {
-                //   handleRouterMove;
-                // }}
-                >
+                  onClick={() => {
+                    history.push('/');
+                  }}>
                   <TransLang text={'menu_header.home'} />
                 </button>
               </div>
             </li>
             <li>
               <div>
-                <button>
+                <button
+                  onClick={() => {
+                    history.push('/about');
+                  }}>
                   <TransLang text={'menu_header.about'} />
                 </button>
               </div>

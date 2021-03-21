@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import CardsSection from '~/components/ProductCardsSection';
 const HomePage: React.FC = () => (
   <div className="home_pg">
@@ -12,4 +13,4 @@ const HomePage: React.FC = () => (
   </div>
 );
 
-export default HomePage;
+export default withRouter(HomePage);
