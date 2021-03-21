@@ -18,7 +18,7 @@
         ".tsx"
       ]
     },
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true,
