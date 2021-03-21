@@ -2,10 +2,14 @@
 
 import React from 'react';
 import TransLang from '~/components/TransLang';
-
 interface Props {}
 
 const MenuHeader = (props: Props) => {
+  // const {} =
+  // const handleRouterMove = () => {
+  //   return '';
+  // };
+
   return (
     <div className="menu_header">
       <div className="menu_header__contents">
@@ -14,7 +18,11 @@ const MenuHeader = (props: Props) => {
           <ul className="menu_header__contents__down__menu">
             <li>
               <div>
-                <button>
+                <button
+                // onClick={() => {
+                //   handleRouterMove;
+                // }}
+                >
                   <TransLang text={'menu_header.home'} />
                 </button>
               </div>
