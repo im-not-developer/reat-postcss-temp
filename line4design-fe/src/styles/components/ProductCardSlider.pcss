@@ -1,6 +1,7 @@
 .product_card_slider {
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
 }
 
 .product_card {
@@ -10,20 +11,26 @@
   min-width: 250px;
   max-width: 250px;
   height: 450px;
-  border: 1px solid var(--red);
+  border: 1px solid var(--gray);
   padding: 10px;
+  margin: 0px 20px 0px 0px;
   &:hover {
     cursor: pointer;
   }
 
   &__up {
+    &__product_img{
+      >img{
+        width: 230px;
+        border-radius: 10px 10px 0px 10px;
 
+      }
+
+
+    }
   }
 
   &__down{
 
   }
-
-
-
 }

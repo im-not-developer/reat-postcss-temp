@@ -22,9 +22,7 @@ const ProductCardsSection = (props = ProductCardsSectionProps) => {
           <div className="title_text">{props?.title ?? ''}</div>
         </div>
 
-        <div className="product_card_section__contents__body">
-          <ProductCardSlider product_list={product_list_items} />
-        </div>
+        <ProductCardSlider product_list={product_list_items} />
       </div>
     </div>
   );

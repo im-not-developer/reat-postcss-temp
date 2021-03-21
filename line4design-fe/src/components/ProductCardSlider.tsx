@@ -19,7 +19,7 @@ const ProductCardSlider = ({ product_list } = ProductCardSliderProps) => {
         return (
           <div key={idx} className="product_card">
             <div className="product_card__up">
-              <div>
+              <div className="product_card__up__product_img">
                 {/* default 찾아서 체크하기 */}
                 <img src={require(`../assets/imgs/sample.jpg`).default} />
               </div>
