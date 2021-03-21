@@ -7,6 +7,7 @@ const HomePage: React.FC = () => (
     <div className="home_pg__contents">
       <CardsSection title="NEW" />
       <CardsSection title="BEST" />
+      {/* <CardsSection title="SALE" /> */}
     </div>
   </div>
 );
