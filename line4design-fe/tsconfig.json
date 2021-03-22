@@ -22,7 +22,8 @@
   },
   "extends": "./tsconfig-path.json",
   "include": [
-    "src"
+    "src",
+    "src/assets"
   ],
   "exclude": [
     "node_modules",
