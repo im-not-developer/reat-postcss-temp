@@ -1,22 +1,30 @@
 /** @format */
 
 import React from 'react';
-import Footer from './components/commons/Footer';
-import Header from './components/commons/Header';
-import MenuHeader from './components/commons/MenuHeader';
-import RoutePresenter from './routes/RoutePresenter';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Footer from '~/components/commons/Footer';
+import Header from '~/components/commons/Header';
+import MenuHeader from '~/components/commons/MenuHeader';
+import AboutPage from '~/pages/AboutPage';
+import HomePage from '~/pages/HomePage';
+import NotFoundPage from '~/routes/NotFound/NotFoundPage';
 interface Props {}
 
-const Line4Design = (props: Props) => {
+const Line4Design: React.FC = (props: Props) => {
   return (
     <div className="line4Design_pg">
-      <Header />
-      <MenuHeader />
-      <div className="line4Design_pg__pages">
-        <RoutePresenter />
-      </div>
-
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <MenuHeader />
+        <div className="line4Design_pg__pages">
+          <Switch>
+            <Route path="/" exact={true} component={HomePage} />
+            <Route path="/about" exact={true} component={AboutPage} />
+            <Route path="*" component={NotFoundPage} />
+          </Switch>
+        </div>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 };

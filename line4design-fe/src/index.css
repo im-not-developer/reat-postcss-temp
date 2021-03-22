@@ -1,5 +1,6 @@
 .title_text,
 .home_pg,
+.about_page,
 .header,
 .footer,
 .menu_header,
@@ -9,11 +10,14 @@
 .product_card,
 .line4Design_pg,
 .home_pg__contents,
+.about_page__contents,
 .header__contents,
 .menu_header__contents,
 .product_card_section__contents,
 .product_card__down,
 .line4Design_pg__pages,
+.about_page__contents__left,
+.about_page__contents__right,
 .header__contents__left,
 .header__contents__right,
 .menu_header__contents__up,
@@ -60,6 +64,28 @@
     max-width: 1600px;
     border: 1px solid var(--red);
   }
+.about_page {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  /* __contents end */
+}
+/* __contents start */
+.about_page__contents{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1600px;
+    height: 85px;
+    border: 1px solid var(--red);
+  }
+.about_page__contents__left {
+      width: 100%;
+
+    }
+.about_page__contents__right {
+    }
 .header {
   display: flex;
   flex-direction: column;
