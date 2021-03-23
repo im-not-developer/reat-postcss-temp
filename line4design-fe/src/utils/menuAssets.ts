@@ -32,6 +32,19 @@ const sideMenuList: sideMenuListTypes[] = [
   },
 ];
 
+export interface allSubMenuTypes {
+  id?: number;
+  name?: string;
+  onSubMenu?: boolean;
+}
+const allSubMenu: allSubMenuTypes[] = [
+  {
+    id: 0,
+    name: 'side_menu_bar.all',
+    onSubMenu: false,
+  },
+];
+
 const SELECT_MAP: SELECT_MAP_TYPES = {
   sideMenuList: sideMenuList,
 };

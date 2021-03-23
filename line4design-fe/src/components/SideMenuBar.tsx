@@ -1,7 +1,8 @@
 /** @format */
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { If } from 'react-if';
+
 import TransLang from '~/components/TransLang';
 import { getSelectMenu, sideMenuListTypes } from '~/utils/menuAssets';
 
@@ -40,13 +41,20 @@ interface sideMenuProps {}
 type Props = sideMenuProps & sideMenuListTypes;
 
 const SideMenuBar: React.FC<Props> = () => {
+  const [menuList, setMenuList] = useState<sideMenuListTypes[] | null>(null);
+
   const handleMenuClick = (value: sideMenuListTypes) => {
-    console.log(value);
+    setMenuList(
+      (menuList ?? []).map(_c => ({
+        ..._c,
+        onMenu: _c.name === value.name,
+      })),
+    );
   };
 
-  const menuList = useMemo(() => {
-    return MEMU_LIST ?? [];
-  }, [MEMU_LIST]);
+  useEffect(() => {
+    setMenuList(MEMU_LIST);
+  }, []);
 
   return (
     <nav className="side_menu_bar">
