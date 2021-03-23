@@ -1,8 +1,10 @@
 /** @format */
 
 import React, { useContext } from 'react';
+
 import TransLang from '~/components/TransLang';
 import { LocaleContext } from '~/providers/LocaleProvider';
+
 const Header = () => {
   const { handleChangeLanguage } = useContext(LocaleContext);
 

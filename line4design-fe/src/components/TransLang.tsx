@@ -1,6 +1,7 @@
 /** @format */
 import classNames from 'classnames';
 import React, { useContext } from 'react';
+
 import { LocaleContext } from '~/providers/LocaleProvider';
 
 export interface PropsType {

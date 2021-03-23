@@ -9,6 +9,7 @@
     "files.associations": {
       "*.css": "postcss"
     },
+    "eslint.nodePath": "./line4design-fe/.eslintrc.js",
     "eslint.options": {
       "extensions": [
         ".html",
@@ -18,25 +19,28 @@
         ".tsx"
       ]
     },
+    "javascript.validate.enable": false,
+    "eslint.workingDirectories": [
+      "./line4design-fe"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      {
+        "language": "typescript",
+        "autoFix": true
+      },
+      {
+        "language": "typescriptreact",
+        "autoFix": true
+      }
+    ],
     "files.autoSave": "off",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true,
       "source.fixAll.eslint": true,
     },
-    "javascript.validate.enable": false,
-    // "eslint.validate": [
-    //   "javascript",
-    //   "javascriptreact",
-    //   {
-    //     "language": "typescript",
-    //     "autoFix": true
-    //   },
-    //   {
-    //     "language": "typescriptreact",
-    //     "autoFix": true
-    //   }
-    // ],
     "[postcss]": {
       "editor.formatOnSave": true
     },
@@ -61,9 +65,7 @@
       "editor.tabSize": 2,
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "eslint.workingDirectories": [
-      "./line4design-fe"
-    ],
+
     "files.encoding": "utf8",
     "editor.tabSize": 2,
     "prettier.singleQuote": true,
