@@ -21,6 +21,8 @@ const MenuRow: React.FC<MenuProps> = ({
   },
   onMenuClick,
 }) => {
+  
+
   return (
     <li>
       <button

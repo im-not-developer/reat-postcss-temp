@@ -9,7 +9,7 @@ interface Props {}
 const ShopPage = (props: Props) => {
   return (
     <div className="shop_page">
-      <div>
+      <div className="shop_page__content">
         <SideMenuBar />
       </div>
     </div>
