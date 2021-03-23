@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+
 import TransLang from '~/components/TransLang';
 
 interface Props {}
@@ -37,7 +38,10 @@ const MenuHeader = (props: Props) => {
             </li>
             <li>
               <div>
-                <button>
+                <button
+                  onClick={() => {
+                    history.push('/shop');
+                  }}>
                   <TransLang text={'menu_header.shop'} />
                 </button>
               </div>

@@ -1,6 +1,7 @@
 .title_text,
 .home_pg,
 .about_page,
+.shop_page,
 .header,
 .footer,
 .menu_header,
@@ -77,7 +78,6 @@
     flex-direction: row;
     width: 100%;
     max-width: 1600px;
-    height: 85px;
     border: 1px solid var(--red);
   }
 .about_page__contents__left {
@@ -86,6 +86,11 @@
     }
 .about_page__contents__right {
     }
+.shop_page {
+  width: 100%;
+  max-width: 220px;
+  border: 1px solid var(--red)
+}
 .header {
   display: flex;
   flex-direction: column;

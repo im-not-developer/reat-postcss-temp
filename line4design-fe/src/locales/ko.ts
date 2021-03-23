@@ -14,7 +14,7 @@ export const ko = {
   'menu_header.shop': `매장`,
   'menu_header.special': `스페셜`,
 
-  'product_card_slider.new':`신상품`,
-  'product_card_slider.discount':`할인`,
-
+  'product_card_slider.new': `신상품`,
+  'product_card_slider.discount': `할인`,
+  'side_menu_bar.all': `전체`,
 };
