@@ -1,38 +1,56 @@
 /** @format */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { If } from 'react-if';
 
 import TransLang from '~/components/TransLang';
-import { getSelectMenu, sideMenuListTypes } from '~/utils/menuAssets';
+import {
+  allSubMenuTypes,
+  getSelectMenu,
+  sideMenuListTypes,
+} from '~/utils/menuAssets';
 
 interface MenuProps {
   menu: sideMenuListTypes;
   onMenuClick: (value: sideMenuListTypes) => void;
 }
 
-const MEMU_LIST = getSelectMenu('sideMenuList');
+const MEMU_LIST = getSelectMenu('sideMenuList') ?? [];
 
 const MenuRow: React.FC<MenuProps> = ({
   menu = {
     id: 0,
     name: '',
+    subMenu: '',
     onMenu: false,
   },
   onMenuClick,
 }) => {
-  
+  const subMenu = useMemo(() => {
+    return menu?.onMenu ? getSelectMenu(menu.subMenu ?? '') : [];
+  }, [menu]);
 
   return (
-    <li>
+    <li className="side_menu_bar__contents__nav__row">
       <button
+        className="side_menu_bar__contents__nav__row__btn"
         onClick={() => {
           onMenuClick(menu);
         }}>
         <TransLang text={menu.name} />
       </button>
       <If condition={menu?.onMenu}>
-        <ul>ddd</ul>
+        <ul className="">
+          {(subMenu ?? [])?.map((c: allSubMenuTypes, idx: number) => {
+            return (
+              <li key={idx}>
+                <button>
+                  <TransLang text={c.name} />
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </If>
     </li>
   );
@@ -61,22 +79,10 @@ const SideMenuBar: React.FC<Props> = () => {
   return (
     <nav className="side_menu_bar">
       <div className="side_menu_bar__contents">
-        <ul>
+        <ul className="side_menu_bar__contents__nav">
           {(menuList ?? []).map((c, idx) => (
             <MenuRow key={idx} menu={c} onMenuClick={handleMenuClick} />
           ))}
-          {/* <li>
-            <button>전체</button>
-          </li>
-          <li>
-            <button>CLOSTING</button>
-          </li>
-          <li>
-            <button>ACC</button>
-          </li>
-          <li>
-            <button>SKILL</button>
-          </li> */}
         </ul>
       </div>
     </nav>

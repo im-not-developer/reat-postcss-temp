@@ -14,15 +14,14 @@ export interface allSubMenuTypes {
 }
 
 export interface SELECT_MAP_TYPES {
-  [k1: string]: sideMenuListTypes[];
-  [k2: string]: allSubMenuTypes[];
+  [key: string]: sideMenuListTypes[] | allSubMenuTypes[];
 }
 
 const sideMenuList: sideMenuListTypes[] = [
   {
     id: 0,
     name: '전체',
-    subMenu: 'allSubMenu',
+    subMenu: '',
     onMenu: false,
   },
   {
@@ -34,13 +33,13 @@ const sideMenuList: sideMenuListTypes[] = [
   {
     id: 2,
     name: 'ACC',
-    subMenu: 'allSubMenu',
+    subMenu: '',
     onMenu: false,
   },
   {
     id: 3,
     name: 'SKILL',
-    subMenu: 'allSubMenu',
+    subMenu: '',
     onMenu: false,
   },
 ];
@@ -89,5 +88,7 @@ const SELECT_MAP: SELECT_MAP_TYPES = {
 };
 
 export const getSelectMenu = (key: string) => {
-  return SELECT_MAP[key] ?? [];
+  if (key) {
+    return SELECT_MAP[key] ?? [];
+  }
 };
