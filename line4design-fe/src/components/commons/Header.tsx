@@ -1,13 +1,10 @@
 /** @format */
 
-import React, { useContext } from 'react';
+import React from 'react';
 
 import TransLang from '~/components/TransLang';
-import { LocaleContext } from '~/providers/LocaleProvider';
 
 const Header = () => {
-  const { handleChangeLanguage } = useContext(LocaleContext);
-
   return (
     <div className="header">
       <div className="header__contents">
