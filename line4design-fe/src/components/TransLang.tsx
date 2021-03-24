@@ -14,14 +14,16 @@ const defaultProps: PropsType = {
   className: 'translang_container',
 };
 
-const TransLang = (props = defaultProps) => {
+const TransLang: React.FC<PropsType> = props => {
   const { viewTransLang } = useContext(LocaleContext);
-
+  console.log(props);
   return (
     <div className={classNames(`${props.className}`)}>
       {viewTransLang(props.text ?? '')}
     </div>
   );
 };
+
+TransLang.defaultProps = defaultProps;
 
 export default TransLang;
