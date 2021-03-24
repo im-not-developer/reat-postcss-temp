@@ -10,22 +10,26 @@ import {
   sideMenuListTypes,
 } from '~/utils/menuAssets';
 
-interface MenuProps {
+// *****[ MenuRow START ]*****
+const MEMU_LIST = getSelectMenu('sideMenuList') ?? [];
+
+interface MenuRowProps {
   menu: sideMenuListTypes;
   onMenuClick: (value: sideMenuListTypes) => void;
 }
 
-const MEMU_LIST = getSelectMenu('sideMenuList') ?? [];
-
-const MenuRow: React.FC<MenuProps> = ({
-  menu = {
+const MenuRowdefaultProps: MenuRowProps = {
+  menu: {
     id: 0,
     name: '',
     subMenu: '',
     onMenu: false,
   },
-  onMenuClick,
-}) => {
+  onMenuClick: () => console.warn('onIncrement not defined'),
+};
+
+const MenuRow: React.FC<MenuRowProps> = props => {
+  const { menu, onMenuClick } = props;
   const subMenu = useMemo(() => {
     return menu?.onMenu ? getSelectMenu(menu.subMenu ?? '') : [];
   }, [menu]);
@@ -40,7 +44,7 @@ const MenuRow: React.FC<MenuProps> = ({
         <TransLang text={menu.name} />
       </button>
       <If condition={menu?.onMenu}>
-        <ul className="">
+        <ul className="side_menu_bar__contents__nav__row__submenu">
           {(subMenu ?? [])?.map((c: allSubMenuTypes, idx: number) => {
             return (
               <li key={idx}>
@@ -56,11 +60,18 @@ const MenuRow: React.FC<MenuProps> = ({
   );
 };
 
+MenuRow.defaultProps = MenuRowdefaultProps;
+
+// *****[ MenuRow END ]*****
+
+// *****[ SideMenuBar START ]*****
 interface sideMenuProps {}
 
-type Props = sideMenuProps & sideMenuListTypes;
+type PropsTypes = sideMenuProps & sideMenuListTypes;
 
-const SideMenuBar: React.FC<Props> = () => {
+const defaultProps: PropsTypes = {};
+
+const SideMenuBar: React.FC<PropsTypes> = props => {
   const [menuList, setMenuList] = useState<sideMenuListTypes[] | null>(null);
 
   const handleMenuClick = (value: sideMenuListTypes) => {
@@ -89,4 +100,8 @@ const SideMenuBar: React.FC<Props> = () => {
   );
 };
 
+SideMenuBar.defaultProps = defaultProps;
+
 export default SideMenuBar;
+
+// *****[ SideMenuBar END ]*****

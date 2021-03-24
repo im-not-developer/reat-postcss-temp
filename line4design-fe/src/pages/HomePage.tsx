@@ -1,11 +1,14 @@
 /** @format */
 
-import React from 'react';
+import React, { FC } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import CardsSection from '~/components/ProductCardsSection';
 
-const HomePage: React.FC = () => (
+interface HomePagePropsType {}
+const HomePageDefaultProps: HomePagePropsType = {};
+
+const HomePage: FC<HomePagePropsType> = () => (
   <div className="home_pg">
     <div className="home_pg__contents">
       <CardsSection title="NEW" />
@@ -15,4 +18,5 @@ const HomePage: React.FC = () => (
   </div>
 );
 
+HomePage.defaultProps = HomePageDefaultProps;
 export default withRouter(HomePage);

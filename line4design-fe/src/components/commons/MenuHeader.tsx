@@ -1,13 +1,14 @@
 /** @format */
 
-import React from 'react';
+import React, { FC } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import TransLang from '~/components/TransLang';
 
-interface Props {}
+interface MenuHeaderPropsTypes {}
 
-const MenuHeader = (props: Props) => {
+const MenuHeaderDefaultProps: MenuHeaderPropsTypes = {};
+const MenuHeader: FC<MenuHeaderPropsTypes> = props => {
   const history = useHistory();
 
   return (
@@ -59,5 +60,5 @@ const MenuHeader = (props: Props) => {
     </div>
   );
 };
-
+MenuHeader.defaultProps = MenuHeaderDefaultProps;
 export default MenuHeader;

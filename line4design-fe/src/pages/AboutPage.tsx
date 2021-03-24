@@ -1,10 +1,11 @@
 /** @format */
 
-import React from 'react';
+import React, { FC } from 'react';
 
-interface Props {}
+interface AboutPagePropsType {}
 
-const AboutPage = (props: Props) => {
+const AboutPageDefaultProps: AboutPagePropsType = {};
+const AboutPage: FC<AboutPagePropsType> = props => {
   return (
     <div className="about_page">
       <div className="about_page__contents">
@@ -21,5 +22,5 @@ const AboutPage = (props: Props) => {
     </div>
   );
 };
-
+AboutPage.defaultProps = AboutPageDefaultProps;
 export default AboutPage;
