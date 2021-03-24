@@ -1,12 +1,13 @@
 /** @format */
 
-import React from 'react';
+import React, { FC } from 'react';
 
 import SideMenuBar from '~/components/SideMenuBar';
 
-interface Props {}
+interface ShopPagePropsType {}
 
-const ShopPage = (props: Props) => {
+const ShopPageDefaultProps: ShopPagePropsType = {};
+const ShopPage: FC<ShopPagePropsType> = props => {
   return (
     <div className="shop_page">
       <div className="shop_page__content">
@@ -15,5 +16,7 @@ const ShopPage = (props: Props) => {
     </div>
   );
 };
+
+ShopPage.defaultProps = ShopPageDefaultProps;
 
 export default ShopPage;

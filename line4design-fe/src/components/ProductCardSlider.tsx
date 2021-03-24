@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { FC } from 'react';
 import { If } from 'react-if';
 
 import { productListTypes } from '~/utils/product_list';
@@ -13,7 +13,8 @@ const ProductCardSliderProps: ProductCardSliderPropsType = {
   product_list: [],
 };
 
-const ProductCardSlider = ({ product_list } = ProductCardSliderProps) => {
+const ProductCardSlider: FC<ProductCardSliderPropsType> = props => {
+  const { product_list } = props;
   return (
     <div className="product_card_slider">
       {(product_list ?? []).map((info, idx) => (
@@ -42,4 +43,5 @@ const ProductCardSlider = ({ product_list } = ProductCardSliderProps) => {
   );
 };
 
+ProductCardSlider.defaultProps = ProductCardSliderProps;
 export default ProductCardSlider;

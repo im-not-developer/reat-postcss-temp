@@ -1,6 +1,7 @@
 /** @format */
 
-import React from 'react';
+import React, { FC } from 'react';
+
 import ProductCardSlider from '~/components/ProductCardSlider';
 import { productListTypes, product_list_items } from '~/utils/product_list';
 
@@ -14,7 +15,7 @@ const ProductCardsSectionProps: ProductCardsSectionPropsType = {
   product_list_items: [],
 };
 
-const ProductCardsSection = (props = ProductCardsSectionProps) => {
+const ProductCardsSection: FC<ProductCardsSectionPropsType> = props => {
   return (
     <div className="product_card_section">
       <div className="product_card_section__contents">
@@ -27,5 +28,7 @@ const ProductCardsSection = (props = ProductCardsSectionProps) => {
     </div>
   );
 };
+
+ProductCardsSection.defaultProps = ProductCardsSectionProps;
 
 export default ProductCardsSection;

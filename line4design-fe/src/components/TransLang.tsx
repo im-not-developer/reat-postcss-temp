@@ -4,19 +4,18 @@ import React, { useContext } from 'react';
 
 import { LocaleContext } from '~/providers/LocaleProvider';
 
-export interface PropsType {
+export interface TransLangPropsTypes {
   text?: string;
   className?: string;
 }
 
-const defaultProps: PropsType = {
+const TransLangDefaultProps: TransLangPropsTypes = {
   text: '',
   className: 'translang_container',
 };
 
-const TransLang: React.FC<PropsType> = props => {
+const TransLang: React.FC<TransLangPropsTypes> = props => {
   const { viewTransLang } = useContext(LocaleContext);
-  console.log(props);
   return (
     <div className={classNames(`${props.className}`)}>
       {viewTransLang(props.text ?? '')}
@@ -24,6 +23,6 @@ const TransLang: React.FC<PropsType> = props => {
   );
 };
 
-TransLang.defaultProps = defaultProps;
+TransLang.defaultProps = TransLangDefaultProps;
 
 export default TransLang;
