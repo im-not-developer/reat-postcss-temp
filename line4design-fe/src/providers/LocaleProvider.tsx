@@ -3,6 +3,7 @@
 import PropTypes from 'prop-types';
 import React, { createContext, FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
 import { Languages } from '~/locales/i18n';
 
 export type LocaleContextState = {
@@ -27,6 +28,7 @@ const LocaleProvider: FC = ({ children }) => {
 
   const handleChangeLanguage = (lang: Languages) => {
     i18n.changeLanguage(lang);
+    setLocale(lang);
   };
 
   const viewTransLang = (key: string) => {
