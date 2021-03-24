@@ -7,14 +7,14 @@ export interface sideMenuListTypes {
   onMenu?: boolean;
 }
 
-export interface allSubMenuTypes {
+export interface subMenuTypes {
   id?: number;
   name?: string;
   onSubMenu?: boolean;
 }
 
 export interface SELECT_MAP_TYPES {
-  [key: string]: sideMenuListTypes[] | allSubMenuTypes[];
+  [key: string]: sideMenuListTypes[] | subMenuTypes[];
 }
 
 const sideMenuList: sideMenuListTypes[] = [
@@ -33,18 +33,18 @@ const sideMenuList: sideMenuListTypes[] = [
   {
     id: 2,
     name: 'ACC',
-    subMenu: '',
+    subMenu: 'accSubMenu',
     onMenu: false,
   },
   {
     id: 3,
     name: 'SKILL',
-    subMenu: '',
+    subMenu: 'accSubMenu',
     onMenu: false,
   },
 ];
 
-const allSubMenu: allSubMenuTypes[] = [
+const allSubMenu: subMenuTypes[] = [
   {
     id: 0,
     name: 'side_menu_bar.all',
@@ -82,9 +82,33 @@ const allSubMenu: allSubMenuTypes[] = [
   },
 ];
 
+const accSubMenu: subMenuTypes[] = [
+  {
+    id: 0,
+    name: 'side_menu_bar.all',
+    onSubMenu: false,
+  },
+  {
+    id: 1,
+    name: 'ZIPER',
+    onSubMenu: false,
+  },
+  {
+    id: 2,
+    name: 'BUTTON',
+    onSubMenu: false,
+  },
+  {
+    id: 3,
+    name: 'STRAP',
+    onSubMenu: false,
+  },
+];
+
 const SELECT_MAP: SELECT_MAP_TYPES = {
   sideMenuList: sideMenuList,
   allSubMenu: allSubMenu,
+  accSubMenu: accSubMenu,
 };
 
 export const getSelectMenu = (key: string) => {

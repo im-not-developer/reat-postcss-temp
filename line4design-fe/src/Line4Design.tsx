@@ -2,8 +2,10 @@
 
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Footer from '~/components/commons/Footer';
 import Header from '~/components/commons/Header';
+import LangSelector from '~/components/commons/LangSelector';
 import MenuHeader from '~/components/commons/MenuHeader';
 import AboutPage from '~/pages/AboutPage';
 import HomePage from '~/pages/HomePage';
@@ -16,6 +18,7 @@ const Line4Design: React.FC = (props: Props) => {
   return (
     <div className="line4Design_pg">
       <BrowserRouter>
+        <LangSelector />
         <Header />
         <MenuHeader />
         <div className="line4Design_pg__pages">

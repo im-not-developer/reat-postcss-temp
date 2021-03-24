@@ -5,9 +5,9 @@ import { If } from 'react-if';
 
 import TransLang from '~/components/TransLang';
 import {
-  allSubMenuTypes,
   getSelectMenu,
   sideMenuListTypes,
+  subMenuTypes,
 } from '~/utils/menuAssets';
 
 // *****[ MenuRow START ]*****
@@ -30,6 +30,7 @@ const MenuRowdefaultProps: MenuRowProps = {
 
 const MenuRow: React.FC<MenuRowProps> = props => {
   const { menu, onMenuClick } = props;
+
   const subMenu = useMemo(() => {
     return menu?.onMenu ? getSelectMenu(menu.subMenu ?? '') : [];
   }, [menu]);
@@ -45,7 +46,7 @@ const MenuRow: React.FC<MenuRowProps> = props => {
       </button>
       <If condition={menu?.onMenu}>
         <ul className="side_menu_bar__contents__nav__row__submenu">
-          {(subMenu ?? [])?.map((c: allSubMenuTypes, idx: number) => {
+          {(subMenu ?? [])?.map((c: subMenuTypes, idx: number) => {
             return (
               <li key={idx}>
                 <button>
@@ -78,7 +79,7 @@ const SideMenuBar: React.FC<PropsTypes> = props => {
     setMenuList(
       (menuList ?? []).map(_c => ({
         ..._c,
-        onMenu: _c.name === value.name,
+        onMenu: _c.name === value.name ? !value.onMenu : false,
       })),
     );
   };
@@ -88,15 +89,20 @@ const SideMenuBar: React.FC<PropsTypes> = props => {
   }, []);
 
   return (
-    <nav className="side_menu_bar">
-      <div className="side_menu_bar__contents">
-        <ul className="side_menu_bar__contents__nav">
-          {(menuList ?? []).map((c, idx) => (
-            <MenuRow key={idx} menu={c} onMenuClick={handleMenuClick} />
-          ))}
-        </ul>
+    <div className="side_menu_bar">
+      <nav className="side_menu_bar__contents">
+        <div className="side_menu_bar__contents__nav">
+          <ul>
+            {(menuList ?? []).map((c, idx) => (
+              <MenuRow key={idx} menu={c} onMenuClick={handleMenuClick} />
+            ))}
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <div>d</div>
       </div>
-    </nav>
+    </div>
   );
 };
 
