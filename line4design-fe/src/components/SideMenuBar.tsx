@@ -90,17 +90,43 @@ const SideMenuBar: React.FC<PropsTypes> = props => {
 
   return (
     <div className="side_menu_bar">
-      <nav className="side_menu_bar__contents">
-        <div className="side_menu_bar__contents__nav">
+      <div className="side_menu_bar__contents">
+        <nav className="side_menu_bar__contents__nav">
           <ul>
             {(menuList ?? []).map((c, idx) => (
               <MenuRow key={idx} menu={c} onMenuClick={handleMenuClick} />
             ))}
           </ul>
+        </nav>
+        <div className="side_menu_bar__contents__filters">
+          {/* 필터 */}
+          <div>
+            <div>
+              <TransLang text={'side_menu_bar.price'} />
+            </div>
+            <ul>
+              <li>10만원 미만</li>
+              <li>10만원 ~ 20만원 미만</li>
+              <li>20만원 ~ 30만원 미만</li>
+              <li>40만원 ~ 50만원 미만</li>
+              <li>50만원 이상</li>
+            </ul>
+          </div>
+
+          {/* 상태 */}
+          <div style={{ margin: '50px 0px 0px 0px' }}>
+            <div>
+              <TransLang text={'side_menu_bar.price'} />
+            </div>
+            <ul>
+              <li>10만원 미만</li>
+              <li>10만원 ~ 20만원 미만</li>
+              <li>20만원 ~ 30만원 미만</li>
+              <li>40만원 ~ 50만원 미만</li>
+              <li>50만원 이상</li>
+            </ul>
+          </div>
         </div>
-      </nav>
-      <div>
-        <div>d</div>
       </div>
     </div>
   );
