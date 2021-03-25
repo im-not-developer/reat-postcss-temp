@@ -1,5 +1,20 @@
 .shop_page {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 220px;
   border: 1px solid var(--red);
+
+  &__contents {
+
+    display: flex;
+    flex-direction: row;
+    max-width: 1900px;
+    &__mall {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: scroll;
+
+    }
+  }
 }

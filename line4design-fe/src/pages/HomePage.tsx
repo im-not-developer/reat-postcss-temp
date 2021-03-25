@@ -1,7 +1,6 @@
 /** @format */
 
 import React, { FC } from 'react';
-import { withRouter } from 'react-router-dom';
 
 import CardsSection from '~/components/ProductCardsSection';
 
@@ -19,4 +18,4 @@ const HomePage: FC<HomePagePropsType> = () => (
 );
 
 HomePage.defaultProps = HomePageDefaultProps;
-export default withRouter(HomePage);
+export default HomePage;
