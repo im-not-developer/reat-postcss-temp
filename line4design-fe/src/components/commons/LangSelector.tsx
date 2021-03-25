@@ -1,13 +1,15 @@
 /** @format */
 
-import React, { useContext } from 'react';
+import React, { FC, useContext } from 'react';
 
 import { languages } from '~/locales/i18n';
 import { LocaleContext } from '~/providers/LocaleProvider';
 
-interface Props {}
+interface LangSelectorProps {}
 
-const LangSelector = (props: Props) => {
+const LangSelectorDefaultProps: LangSelectorProps = {};
+
+const LangSelector: FC<LangSelectorProps> = props => {
   const { handleChangeLanguage, locale } = useContext(LocaleContext);
 
   return (
@@ -33,5 +35,7 @@ const LangSelector = (props: Props) => {
     </div>
   );
 };
+
+LangSelector.defaultProps = LangSelectorDefaultProps;
 
 export default LangSelector;

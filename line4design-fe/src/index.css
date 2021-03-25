@@ -26,6 +26,7 @@
 .header__contents__right,
 .menu_header__contents__up,
 .product_card_section__contents__head,
+.side_menu_bar__contents__filters,
 .header__contents__left__logo,
 .header__contents__left__menu,
 .header__contents__center__search,
@@ -267,6 +268,10 @@
           width: 100%;
           max-width: 150px;
         }
+.side_menu_bar__contents__filters {
+      margin: 50px 0px 0px 0px;
+
+    }
 .line4Design_pg {
   width:100%;
   max-width: 1920px;

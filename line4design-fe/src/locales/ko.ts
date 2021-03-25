@@ -17,4 +17,5 @@ export const ko = {
   'product_card_slider.new': `신상품`,
   'product_card_slider.discount': `할인`,
   'side_menu_bar.all': `전체`,
+  'side_menu_bar.price': `가격`,
 };

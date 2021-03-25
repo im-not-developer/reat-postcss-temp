@@ -17,4 +17,5 @@ export const en = {
   'product_card_slider.new': `NEW`,
   'product_card_slider.discount': `DISCOUNT`,
   'side_menu_bar.all': `All`,
+  'side_menu_bar.price': `Price`,
 };
