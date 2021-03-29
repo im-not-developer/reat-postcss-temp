@@ -9,7 +9,7 @@
     "files.associations": {
       "*.css": "postcss"
     },
-    "eslint.nodePath": "./line4design-fe/.eslintrc.js",
+    // "eslint.nodePath": "./line4design-fe/.eslintrc.js",
     "eslint.options": {
       "extensions": [
         ".html",
