@@ -5,80 +5,38 @@
     }
   ],
   "settings": {
-    "workbench.editor.revealIfOpen": true,
-    "files.associations": {
-      "*.css": "postcss"
+    "[python]": {
+			"editor.rulers": [79],
+			"editor.tabSize": 4
+		},
+		"[javascript]": {
+			"editor.rulers": [100],
+			"editor.tabSize": 2,
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescript]": {
+			"editor.rulers": [100],
+			"editor.tabSize": 2,
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescriptreact]": {
+			"editor.rulers": [100],
+			"editor.tabSize": 2,
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"eslint.workingDirectories": [
+			"./line4design-fe",
+       {"mode": "auto"}
+		],
+		"flow.enabled": false,
+		"files.encoding": "utf8",
+		"search.exclude": {
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/*.code-search": true,
+			"**/migrations/*.py": true
     },
-    // "eslint.nodePath": "./line4design-fe/.eslintrc.js",
-    "eslint.options": {
-      "extensions": [
-        ".html",
-        ".js",
-        ".jsx",
-        ".ts",
-        ".tsx"
-      ]
-    },
-    "javascript.validate.enable": false,
-    "eslint.workingDirectories": [
-      "./line4design-fe"
-    ],
-    "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      {
-        "language": "typescript",
-        "autoFix": true
-      },
-      {
-        "language": "typescriptreact",
-        "autoFix": true
-      }
-    ],
-    "files.autoSave": "off",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true,
-      "source.fixAll.eslint": true,
-    },
-    "[postcss]": {
-      "editor.formatOnSave": true
-    },
-    "[javascript]": {
-      "editor.rulers": [
-        100
-      ],
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-      "editor.rulers": [
-        100
-      ],
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-      "editor.rulers": [
-        100
-      ],
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "files.encoding": "utf8",
     "editor.tabSize": 2,
-    "prettier.singleQuote": true,
-    "editor.detectIndentation": false,
-    "editor.minimap.enabled": false,
-    "javascript.format.enable": false,
-    "window.zoomLevel": 0,
-    "search.exclude": {
-      "**/node_modules": true,
-      "**/bower_components": true,
-    },
-    "eslint.format.enable": true,
-    "eslint.autoFixOnSave": true,
   },
   "tasks": {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
