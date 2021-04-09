@@ -1,9 +1,8 @@
 /** @format */
 
-import React, { FC } from 'react';
-import { If } from 'react-if';
+import React, {FC} from 'react';
 
-import { productListTypes } from '~/utils/product_list';
+import {productListTypes} from '~/utils/product_list';
 
 interface ProductCardSliderPropsType {
   product_list?: productListTypes[];
@@ -13,8 +12,8 @@ const ProductCardSliderProps: ProductCardSliderPropsType = {
   product_list: [],
 };
 
-const ProductCardSlider: FC<ProductCardSliderPropsType> = props => {
-  const { product_list } = props;
+const ProductCardSlider: FC<ProductCardSliderPropsType> = (props) => {
+  const {product_list} = props;
   return (
     <div className="product_card_slider">
       {(product_list ?? []).map((info, idx) => (
@@ -30,11 +29,13 @@ const ProductCardSlider: FC<ProductCardSliderPropsType> = props => {
             <div>{info?.name}</div>
             <div>
               <div>{info?.price}</div>
-              <If condition={info?.discount_on}>
-                <div>{info?.discount_price}</div>
-                <div>{info?.discount_percent}</div>
-                <div>{info?.discount_price}</div>
-              </If>
+              {info?.discount_on && (
+                <>
+                  <div>{info?.discount_price}</div>
+                  <div>{info?.discount_percent}</div>
+                  <div>{info?.discount_price}</div>
+                </>
+              )}
             </div>
           </div>
         </div>
