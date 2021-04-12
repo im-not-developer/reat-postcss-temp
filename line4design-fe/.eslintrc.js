@@ -12,37 +12,30 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     // 'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
+
+    // 'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:css-modules/recommended',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
+    // 'plugin:css-modules/recommended',
   ],
-  parserOptions: {
-    useEslintrc: false,
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2017,
-    sourceType: 'module',
-  },
-  // plugins: ['react', '@typescript-eslint', 'prettier', 'css-modules'],
-  plugins: ['react', '@typescript-eslint','prettier', 'css-modules'],
   rules: {
     // prop type children 프롭스때문에 에러 발생시 사용
     'react/prop-types': 'off',
-    // empty arrow function lint
-    'no-empty-function': 'off',
-    'import/no-cycle': 'off',
-    'css-modules/no-unused-class': [2, { camelCase: true }],
-    'css-modules/no-undef-class': [2, { camelCase: true }],
-    '@typescript-eslint/no-empty-function': ['error'],
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    // 'no-empty-function': 'off',
+    // 'import/no-cycle': 'off',
+    // '@typescript-eslint/no-empty-function': ['error'],
+    // '@typescript-eslint/no-var-requires': 'off',
+    // '@typescript-eslint/no-empty-interface': 'off',
+    // '@typescript-eslint/interface-name-prefix': 'off',
+    // '@typescript-eslint/explicit-function-return-type': 'off',
+    // '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // '@typescript-eslint/no-explicit-any': 'off',
+    // 'css-modules/no-unused-class': [2, { camelCase: true }],
+    // 'css-modules/no-undef-class': [2, { camelCase: true }],
     'max-len': [
       'error',
       100,
@@ -81,7 +74,13 @@ module.exports = {
     'import/no-unresolved': 'off',
   },
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
+      'babel-module': {
+        extensions: ['.ts', '.tsx','.d.ts', '.js', '.jsx'],
+      },
       'babel-plugin-root-import': {
         rootPathPrefix: '~',
         rootPathSuffix: 'src',

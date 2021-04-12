@@ -5,10 +5,10 @@ import React, { FC } from 'react';
 import CardsSection from '~/components/ProductCardsSection';
 import SideMenuBar from '~/components/SideMenuBar';
 
-interface ShopPagePropsType {}
+// interface ShopPagePropsType {}
 
-const ShopPageDefaultProps: ShopPagePropsType = {};
-const ShopPage: FC<ShopPagePropsType> = props => {
+// const ShopPageDefaultProps: ShopPagePropsType = {};
+const ShopPage: FC = () => {
   return (
     <div className="shop_page">
       <div className="shop_page__contents">
@@ -28,6 +28,5 @@ const ShopPage: FC<ShopPagePropsType> = props => {
   );
 };
 
-ShopPage.defaultProps = ShopPageDefaultProps;
 
 export default ShopPage;

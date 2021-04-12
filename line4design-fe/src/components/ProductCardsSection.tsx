@@ -15,7 +15,7 @@ const ProductCardsSectionProps: ProductCardsSectionPropsType = {
   product_list_items: [],
 };
 
-const ProductCardsSection: FC<ProductCardsSectionPropsType> = props => {
+const CardsSection: FC<ProductCardsSectionPropsType> = props => {
   return (
     <div className="product_card_section">
       <div className="product_card_section__contents">
@@ -29,6 +29,6 @@ const ProductCardsSection: FC<ProductCardsSectionPropsType> = props => {
   );
 };
 
-ProductCardsSection.defaultProps = ProductCardsSectionProps;
+CardsSection.defaultProps = ProductCardsSectionProps;
 
-export default ProductCardsSection;
+export default CardsSection;

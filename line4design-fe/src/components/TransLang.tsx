@@ -9,20 +9,21 @@ export interface TransLangPropsTypes {
   className?: string;
 }
 
-const TransLangDefaultProps: TransLangPropsTypes = {
-  text: '',
-  className: 'translang_container',
-};
+// const TransLangDefaultProps: TransLangPropsTypes = {
+//   text: '',
+//   className: 'translang_container',
+// };
+type Props = TransLangPropsTypes
 
-const TransLang: React.FC<TransLangPropsTypes> = props => {
+const TransLang: React.FC<Props> = ({className='', text=''}) => {
   const { viewTransLang } = useContext(LocaleContext);
   return (
-    <div className={classNames(`${props.className}`)}>
-      {viewTransLang(props.text ?? '')}
+    <div className={classNames(`${className}`)}>
+      {viewTransLang(text ?? '')}
     </div>
   );
 };
 
-TransLang.defaultProps = TransLangDefaultProps;
+// TransLang.defaultProps = TransLangDefaultProps;
 
 export default TransLang;

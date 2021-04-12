@@ -1,7 +1,7 @@
 /** @format */
 
-import React, { useEffect, useMemo, useState } from 'react';
-import { If } from 'react-if';
+import React, {useEffect, useMemo, useState} from 'react';
+import {If} from 'react-if';
 
 import TransLang from '~/components/TransLang';
 import {
@@ -15,7 +15,8 @@ const MEMU_LIST = getSelectMenu('sideMenuList') ?? [];
 
 interface MenuRowProps {
   menu: sideMenuListTypes;
-  onMenuClick: (value: sideMenuListTypes) => void;
+  // onMenuClick: (value:sideMenuListTypes) => void;
+  onMenuClick: (value: any) => void;
 }
 
 const MenuRowdefaultProps: MenuRowProps = {
@@ -28,8 +29,8 @@ const MenuRowdefaultProps: MenuRowProps = {
   onMenuClick: () => console.warn('onIncrement not defined'),
 };
 
-const MenuRow: React.FC<MenuRowProps> = props => {
-  const { menu, onMenuClick } = props;
+const MenuRow: React.FC<MenuRowProps> = (props) => {
+  const {menu, onMenuClick} = props;
 
   const subMenu = useMemo(() => {
     return menu?.onMenu ? getSelectMenu(menu.subMenu ?? '') : [];
@@ -66,18 +67,17 @@ MenuRow.defaultProps = MenuRowdefaultProps;
 // *****[ MenuRow END ]*****
 
 // *****[ SideMenuBar START ]*****
-interface sideMenuProps {}
 
-type PropsTypes = sideMenuProps & sideMenuListTypes;
+type PropsTypes = sideMenuListTypes;
 
 const defaultProps: PropsTypes = {};
 
-const SideMenuBar: React.FC<PropsTypes> = props => {
+const SideMenuBar: React.FC<PropsTypes> = () => {
   const [menuList, setMenuList] = useState<sideMenuListTypes[] | null>(null);
 
   const handleMenuClick = (value: sideMenuListTypes) => {
     setMenuList(
-      (menuList ?? []).map(_c => ({
+      (menuList ?? []).map((_c) => ({
         ..._c,
         onMenu: _c.name === value.name ? !value.onMenu : false,
       })),
@@ -114,7 +114,7 @@ const SideMenuBar: React.FC<PropsTypes> = props => {
           </div>
 
           {/* 상태 */}
-          <div style={{ margin: '50px 0px 0px 0px' }}>
+          <div style={{margin: '50px 0px 0px 0px'}}>
             <div>
               <TransLang text={'side_menu_bar.price'} />
             </div>
