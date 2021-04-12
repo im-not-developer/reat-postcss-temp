@@ -19,7 +19,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
     // 'plugin:css-modules/recommended',
   ],
   rules: {
@@ -28,8 +28,8 @@ module.exports = {
     // 'no-empty-function': 'off',
     // 'import/no-cycle': 'off',
     // '@typescript-eslint/no-empty-function': ['error'],
-    // '@typescript-eslint/no-var-requires': 'off',
-    // '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     // '@typescript-eslint/interface-name-prefix': 'off',
     // '@typescript-eslint/explicit-function-return-type': 'off',
     // '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -50,11 +50,11 @@ module.exports = {
     ],
     'no-unused-vars': [
       'warn',
-      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+      {varsIgnorePattern: '^_', argsIgnorePattern: '^_'},
     ],
     '@typescript-eslint/no-unused-vars': [
       'warn',
-      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+      {varsIgnorePattern: '^_', argsIgnorePattern: '^_'},
     ],
     'import/order': [
       'warn',
@@ -70,7 +70,7 @@ module.exports = {
       },
     ],
     'import/newline-after-import': ['warn'],
-    'react/jsx-no-undef': ['error', { allowGlobals: true }],
+    'react/jsx-no-undef': ['error', {allowGlobals: true}],
     'import/no-unresolved': 'off',
   },
   settings: {
@@ -79,14 +79,14 @@ module.exports = {
     },
     'import/resolver': {
       'babel-module': {
-        extensions: ['.ts', '.tsx','.d.ts', '.js', '.jsx'],
+        extensions: ['.ts', '.tsx', '.d.ts', '.js', '.jsx'],
       },
       'babel-plugin-root-import': {
         rootPathPrefix: '~',
         rootPathSuffix: 'src',
       },
       node: {
-        extensions: ['.ts', '.tsx','.d.ts', '.js', '.jsx'],
+        extensions: ['.ts', '.tsx', '.d.ts', '.js', '.jsx'],
         moduleDirectory: ['node_modules', 'src/'],
       },
     },
