@@ -1,8 +1,9 @@
-/** @format */
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import AppPresenter from './AppPresenter';
-import './index.css';
+// import './index.css';
+import './assets/css/main.css';
 import './locales/i18n';
 import reportWebVitals from './reportWebVitals';
 
