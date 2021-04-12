@@ -1,13 +1,11 @@
-/** @format */
-
 import React, { FC } from 'react';
 
 import CardsSection from '~/components/ProductCardsSection';
 
-interface HomePagePropsType {}
-const HomePageDefaultProps: HomePagePropsType = {};
+// interface HomePagePropsType {}
+// const HomePageDefaultProps: HomePagePropsType = {};
 
-const HomePage: FC<HomePagePropsType> = () => (
+const HomePage: FC = () => (
   <div className="home_pg">
     <div className="home_pg__contents">
       <CardsSection title="NEW" />
@@ -17,5 +15,5 @@ const HomePage: FC<HomePagePropsType> = () => (
   </div>
 );
 
-HomePage.defaultProps = HomePageDefaultProps;
+// HomePage.defaultProps = HomePageDefaultProps;
 export default HomePage;

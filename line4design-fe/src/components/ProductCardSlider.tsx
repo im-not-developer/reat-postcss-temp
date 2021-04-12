@@ -5,15 +5,15 @@ import React, {FC} from 'react';
 import {productListTypes} from '~/utils/product_list';
 
 interface ProductCardSliderPropsType {
-  product_list?: productListTypes[];
+  product_list: productListTypes[];
 }
 
-const ProductCardSliderProps: ProductCardSliderPropsType = {
-  product_list: [],
-};
+type Props = ProductCardSliderPropsType
 
-const ProductCardSlider: FC<ProductCardSliderPropsType> = (props) => {
-  const {product_list} = props;
+
+const ProductCardSlider: FC<Props> = ({product_list}) => {
+
+
   return (
     <div className="product_card_slider">
       {(product_list ?? []).map((info, idx) => (
@@ -21,7 +21,7 @@ const ProductCardSlider: FC<ProductCardSliderPropsType> = (props) => {
           <div className="product_card__up">
             <div className="product_card__up__product_img">
               {/* default 찾아서 체크하기 */}
-              <img src={require(`~/assets/imgs/sample.jpg`).default} />
+              {/* <img src={require(`~/assets/imgs/sample.jpg`).default} /> */}
             </div>
           </div>
           <div className="product_card__down">
@@ -44,5 +44,5 @@ const ProductCardSlider: FC<ProductCardSliderPropsType> = (props) => {
   );
 };
 
-ProductCardSlider.defaultProps = ProductCardSliderProps;
+// ProductCardSlider.defaultProps = ProductCardSliderProps;
 export default ProductCardSlider;

@@ -2,15 +2,13 @@
 
 import React, { FC } from 'react';
 
-interface AboutPagePropsType {}
 
-const AboutPageDefaultProps: AboutPagePropsType = {};
-const AboutPage: FC<AboutPagePropsType> = props => {
+const AboutPage: FC = () => {
   return (
     <div className="about_page">
       <div className="about_page__contents">
         <div className="about_page__contents__left">
-          <img src={require('~/assets/imgs/about_sample.jpeg').default}></img>
+          {/* <img src={require('~/assets/imgs/about_sample.jpeg').default}></img> */}
         </div>
         <div className="about_page__contents__right">
           마크 제이콥스는 개성 넘치는 디자이너의 위트를 기반으로 클래식함과
@@ -22,5 +20,4 @@ const AboutPage: FC<AboutPagePropsType> = props => {
     </div>
   );
 };
-AboutPage.defaultProps = AboutPageDefaultProps;
 export default AboutPage;

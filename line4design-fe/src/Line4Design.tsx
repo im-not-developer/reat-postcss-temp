@@ -1,6 +1,4 @@
-/** @format */
-
-import React from 'react';
+import React,{FC} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Footer from '~/components/commons/Footer';
@@ -12,9 +10,7 @@ import HomePage from '~/pages/HomePage';
 import ShopPage from '~/pages/ShopPage';
 import NotFoundPage from '~/routes/NotFound/NotFoundPage';
 
-interface Props {}
-
-const Line4Design: React.FC = (props: Props) => {
+const Line4Design: FC = () => {
   return (
     <div className="line4Design_pg">
       <BrowserRouter>

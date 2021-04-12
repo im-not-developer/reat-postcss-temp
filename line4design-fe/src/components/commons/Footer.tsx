@@ -1,10 +1,9 @@
 /** @format */
 
-import React from 'react';
+import React,{FC} from 'react';
 
-interface Props {}
 
-const Footer = (props: Props) => {
+const Footer:FC = () => {
   return (
     <div className="footer">
       <div>

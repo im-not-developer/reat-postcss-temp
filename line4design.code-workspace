@@ -5,10 +5,6 @@
     }
   ],
   "settings": {
-    "[python]": {
-			"editor.rulers": [79],
-			"editor.tabSize": 4
-		},
 		"[javascript]": {
 			"editor.rulers": [100],
 			"editor.tabSize": 2,
@@ -25,17 +21,15 @@
 			"editor.defaultFormatter": "esbenp.prettier-vscode"
 		},
 		"eslint.workingDirectories": [
-			"./line4design-fe",
-       {"mode": "auto"}
+			"./line4design-fe"
 		],
-		"flow.enabled": false,
 		"files.encoding": "utf8",
 		"search.exclude": {
 			"**/node_modules": true,
 			"**/bower_components": true,
 			"**/*.code-search": true,
 			"**/migrations/*.py": true
-    },
+		},
     "editor.tabSize": 2,
   },
   "tasks": {
