@@ -1,5 +1,5 @@
-import React,{FC} from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, {FC} from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Footer from '~/components/commons/Footer';
 import Header from '~/components/commons/Header';

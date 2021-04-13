@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import AppPresenter from './AppPresenter';
 // import './index.css';
-import './assets/css/main.css';
+import './Line4design.css';
 import './locales/i18n';
 import reportWebVitals from './reportWebVitals';
 
