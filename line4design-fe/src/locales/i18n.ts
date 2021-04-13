@@ -3,14 +3,16 @@ import {initReactI18next} from 'react-i18next';
 
 import {en} from './en';
 import {ko} from './ko';
+import {jp} from './jp';
 
-export const languages = ['en', 'ko'] as const;
+export const languages = ['en', 'ko', 'jp'] as const;
 
 export type Languages = typeof languages[number]; // 'en' | 'ko'
 
 const resources = {
   en: {translation: en},
   ko: {translation: ko},
+  jp: {translation: jp},
 };
 
 const userLanguage = window?.navigator?.language ?? 'en'; //window?.navigator?.userLanguage) ?? 'en';
