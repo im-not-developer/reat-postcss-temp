@@ -17,13 +17,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    "plugin:jsx-a11y/recommended",
   ],
-  plugins:[
-    "react",
-    "import",
-    "jsx-a11y"
-  ],
+  plugins: ['react', 'import'],
   rules: {
     // prop type children 프롭스때문에 에러 발생시 사용
     'react/prop-types': 0,

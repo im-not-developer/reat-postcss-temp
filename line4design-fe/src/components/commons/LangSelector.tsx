@@ -12,7 +12,6 @@ const LangSelector: FC = () => {
         <div>{locale?.toUpperCase()}</div>
         <ul>
           {languages.map((l, idx) => {
-            console.log(l);
             return (
               <li
                 className="lang_selector__contents__drop_lang"
