@@ -255,3 +255,6 @@ dmypy.json
 /db.sqlite3
 /media
 /static
+
+# UserAdd
+./line4design-fe/src/assets/css/main.css
