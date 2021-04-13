@@ -1,12 +1,10 @@
-/** @format */
+import React, {FC, useContext} from 'react';
 
-import React, { FC, useContext } from 'react';
-
-import { languages } from '~/locales/i18n';
-import { LocaleContext } from '~/providers/LocaleProvider';
+import {languages} from '~/locales/i18n';
+import {LocaleContext} from '~/providers/LocaleProvider';
 
 const LangSelector: FC = () => {
-  const { handleChangeLanguage, locale } = useContext(LocaleContext);
+  const {handleChangeLanguage, locale} = useContext(LocaleContext);
 
   return (
     <div className="lang_selector">

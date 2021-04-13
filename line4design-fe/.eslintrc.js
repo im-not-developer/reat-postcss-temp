@@ -11,25 +11,29 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   extends: [
-    // 'eslint:recommended',
-
-    // 'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    // 'plugin:css-modules/recommended',
+    "plugin:jsx-a11y/recommended",
+  ],
+  plugins:[
+    "react",
+    "import",
+    "jsx-a11y"
   ],
   rules: {
     // prop type children 프롭스때문에 에러 발생시 사용
-    'react/prop-types': 'off',
+    'react/prop-types': 0,
+    'react/jsx-filename-extension': 0,
+
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     // 'no-empty-function': 'off',
     // 'import/no-cycle': 'off',
     // '@typescript-eslint/no-empty-function': ['error'],
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-empty-interface': 'off',
     // '@typescript-eslint/interface-name-prefix': 'off',
     // '@typescript-eslint/explicit-function-return-type': 'off',
     // '@typescript-eslint/explicit-module-boundary-types': 'off',

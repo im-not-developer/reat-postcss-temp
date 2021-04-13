@@ -17,7 +17,7 @@ const colorSet = {
   gray900: '#323d45',
   backgroundLight: '#f5f5f5',
   backgroundBase: '#e5e5e5',
-  backgroundDark: '#c2c2c2'
+  backgroundDark: '#c2c2c2',
 };
 
 export default colorSet;

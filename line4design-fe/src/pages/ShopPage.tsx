@@ -1,32 +1,13 @@
 /** @format */
 
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 
-import CardsSection from '~/components/ProductCardsSection';
-import SideMenuBar from '~/components/SideMenuBar';
-
-// interface ShopPagePropsType {}
-
-// const ShopPageDefaultProps: ShopPagePropsType = {};
 const ShopPage: FC = () => {
   return (
     <div className="shop_page">
-      <div className="shop_page__contents">
-        <SideMenuBar />
-        <div className="shop_page__contents__mall">
-          <CardsSection title="NEW" />
-          <CardsSection title="BEST" />
-          <CardsSection title="강혜림" />
-          <CardsSection title="BEST" />
-          <CardsSection title="NEW" />
-          <CardsSection title="BEST" />
-          <CardsSection title="NEW" />
-          <CardsSection title="BEST" />
-        </div>
-      </div>
+      <div>ShopPage</div>
     </div>
   );
 };
-
 
 export default ShopPage;

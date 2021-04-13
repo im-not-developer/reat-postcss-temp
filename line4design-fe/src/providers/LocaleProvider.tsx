@@ -1,10 +1,10 @@
 /** @format */
 
 import PropTypes from 'prop-types';
-import React, { createContext, FC, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, {createContext, FC, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
-import { Languages } from '~/locales/i18n';
+import {Languages} from '~/locales/i18n';
 
 export type LocaleContextState = {
   locale: string;
@@ -22,8 +22,8 @@ export const LocaleContext = createContext<LocaleContextState>(
   contextDefaultValues,
 );
 
-const LocaleProvider: FC = ({ children }) => {
-  const { t, i18n } = useTranslation();
+const LocaleProvider: FC = ({children}) => {
+  const {t, i18n} = useTranslation();
   const [locale, setLocale] = useState<string>(contextDefaultValues.locale);
 
   const handleChangeLanguage = (lang: Languages) => {

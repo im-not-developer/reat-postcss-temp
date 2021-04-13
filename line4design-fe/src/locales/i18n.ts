@@ -1,17 +1,16 @@
-/** @format */
-
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import { en } from './en';
-import { ko } from './ko';
+import {initReactI18next} from 'react-i18next';
+
+import {en} from './en';
+import {ko} from './ko';
 
 export const languages = ['en', 'ko'] as const;
 
 export type Languages = typeof languages[number]; // 'en' | 'ko'
 
 const resources = {
-  en: { translation: en },
-  ko: { translation: ko },
+  en: {translation: en},
+  ko: {translation: ko},
 };
 
 const userLanguage = window?.navigator?.language ?? 'en'; //window?.navigator?.userLanguage) ?? 'en';

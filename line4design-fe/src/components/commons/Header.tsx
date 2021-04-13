@@ -1,9 +1,8 @@
+import React, {FC} from 'react';
 
-import React,{FC} from 'react';
+import TransLang from '~/components/commons/TransLang';
 
-import TransLang from '~/components/TransLang';
-
-const Header:FC = () => {
+const Header: FC = () => {
   return (
     <div className="header">
       <div className="header__contents">
