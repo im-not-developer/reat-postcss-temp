@@ -8,8 +8,8 @@ import {Languages} from '~/locales/i18n';
 
 export type LocaleContextState = {
   locale: string;
-  handleChangeLanguage: (lang: Languages) => void;
-  viewTransLang: (key: string) => string;
+  handleChangeLanguage(lang: string): void;
+  viewTransLang(key: string): string;
 };
 
 const contextDefaultValues: LocaleContextState = {
