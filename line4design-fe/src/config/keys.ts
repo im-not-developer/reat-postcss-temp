@@ -6,7 +6,7 @@ const keyListMap: keyListMapTypes = {
   LANG_KEY: 'line4design_lang',
 };
 
-export const getFindKeys = (key: string) => {
+export const getFindKeys = (key: string): string | null => {
   if (!key) {
     return null;
   }
