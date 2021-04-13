@@ -1,3 +1,6 @@
+/* LINE4DESIGN CUSTOM PCSS FILE */
+@import '../../../Line4Design.pcss';
+/* TAILWIND FILE */
 @tailwind base;
 @tailwind components;
 
