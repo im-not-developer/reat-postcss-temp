@@ -7,14 +7,13 @@ const LangSelector: FC = () => {
   const {handleChangeLanguage, locale} = useContext(LocaleContext);
 
   return (
-    <div className="lang_selector grid grid-cols-1">
-      <div className="flex flex-col ">
+    <div className="lang_selector">
+      <div className="flex flex-col colors.red-500">
         <div>{locale?.toUpperCase()}</div>
         <ul>
           {languages.map((l, idx) => {
             return (
               <li
-                className=""
                 key={idx}
                 onClick={() => {
                   handleChangeLanguage(l);

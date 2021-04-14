@@ -6,12 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'main-gray': '#e4e4e4',
-      },
-      height: {
-        header: '3.5rem',
-        'full-map': 'calc(100% - 3.5rem - 1.75rem)',
-        footer: '1.75rem',
+        'main-gray': '#40444b',
+        'main-orange': '#ff6c0f',
+        'main-red': '#fa2528',
+        'main-yellow': '#f3ce02',
+        'main-gray-dark': '#2a2f38',
+        'main-dark': '#1c2027',
+        'main-darker': '#111418',
+        'main-light': '#a9b1ba',
+        'main-green': '#a1cd3d',
       },
     },
   },

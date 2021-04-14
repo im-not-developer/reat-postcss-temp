@@ -1,5 +1,3 @@
-/** @format */
-
 export interface productListTypes {
   id?: number;
   category?: string;
