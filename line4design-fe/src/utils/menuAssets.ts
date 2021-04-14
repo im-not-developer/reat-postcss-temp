@@ -1,5 +1,3 @@
-/** @format */
-
 export interface sideMenuListTypes {
   id?: number;
   name?: string;
