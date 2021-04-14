@@ -12,12 +12,12 @@ import NotFoundPage from '~/routes/NotFound/NotFoundPage';
 
 const Line4Design: FC = () => {
   return (
-    <div className="line4Design_pg">
+    <div className="">
       <BrowserRouter>
         <LangSelector />
         <Header />
         <MenuHeader />
-        <div className="line4Design_pg__pages">
+        <div className="">
           <Switch>
             <Route path="/" exact={true} component={HomePage} />
             <Route path="/about" exact={true} component={AboutPage} />
