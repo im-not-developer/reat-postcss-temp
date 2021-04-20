@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Footer from '~/components/commons/Footer';
 import Header from '~/components/commons/Header';
-import LangSelector from '~/components/commons/LangSelector';
+import TopBar from '~/components/commons/TopBar';
 import MenuHeader from '~/components/commons/MenuHeader';
 import AboutPage from '~/pages/AboutPage';
 import HomePage from '~/pages/HomePage';
@@ -12,20 +12,23 @@ import NotFoundPage from '~/routes/NotFound/NotFoundPage';
 
 const Line4Design: FC = () => {
   return (
-    <div className="">
+    <div className="line4Design-pg">
       <BrowserRouter>
-        <LangSelector />
-        <Header />
-        <MenuHeader />
-        <div className="">
-          <Switch>
-            <Route path="/" exact={true} component={HomePage} />
-            <Route path="/about" exact={true} component={AboutPage} />
-            <Route path="/shop" exact={true} component={ShopPage} />
-            <Route path="*" component={NotFoundPage} />
-          </Switch>
+        <TopBar />
+        <div className="line4Design-pg__container">
+          <Header />
+          <MenuHeader />
+          <div>
+            <Switch>
+              <Route path="/" exact={true} component={HomePage} />
+              <Route path="/about" exact={true} component={AboutPage} />
+              <Route path="/shop" exact={true} component={ShopPage} />
+              <Route path="*" component={NotFoundPage} />
+            </Switch>
+          </div>
+
+          <Footer />
         </div>
-        <Footer />
       </BrowserRouter>
     </div>
   );
