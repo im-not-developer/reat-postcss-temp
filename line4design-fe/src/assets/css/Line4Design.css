@@ -1,0 +1,29 @@
+.line4Design-pg,
+.line4Design-pg__container {}
+
+/* TAILWIND FILE */
+
+/* @tailwind base;
+@tailwind components;
+
+@tailwind utilities; */
+
+/* STYLES DIR */
+
+/* LINE4DESIGN CUSTOM PCSS FILE */
+
+.line4Design-pg {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.line4Design-pg__container {
+    width: 100%;
+    max-width: 1280px;
+  }

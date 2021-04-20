@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import AppPresenter from './AppPresenter';
-// import './index.css';
-import './Line4design.css';
+import './assets/css/Line4Design.css';
+import './assets/css/tailwind.css';
 import './locales/i18n';
 import reportWebVitals from './reportWebVitals';
 

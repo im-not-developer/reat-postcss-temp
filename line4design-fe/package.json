@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build:css": "postcss --config postcss.config.js src/assets/css/tailwind/tailwind.css -o src/assets/css/main.css",
-    "watch:css": "postcss --config postcss.config.js src/Line4Design.pcss -o src/Line4design.css -w",
+    "watch:css": "postcss --config postcss.config.js src/Line4Design.pcss -o src/assets/css/Line4Design.css -w",
     "start": "npm-run-all -p watch:css start-js",
     "start-js": "react-app-rewired start",
     "build-js": "react-app-rewired build",
@@ -84,6 +84,7 @@
     "react-dom": "^17.0.1",
     "react-if": "^4.0.1",
     "react-intl-translations-manager": "^5.0.3",
+    "tailwind-styled-components": "^1.0.7",
     "tailwindcss": "^2.1.1",
     "webpack-bundle-analyzer": "^4.4.0"
   }
