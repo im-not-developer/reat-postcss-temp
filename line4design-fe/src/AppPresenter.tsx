@@ -3,7 +3,7 @@ import {SWRConfig} from 'swr';
 
 import Line4Design from './Line4Design';
 import LocaleProvider from './providers/LocaleProvider';
-import GlobalStyle from './assets/css/GlobalStyles';
+import GlobalStyle from './GlobalStyles';
 
 const AppPresenter: FC = () => {
   return (
