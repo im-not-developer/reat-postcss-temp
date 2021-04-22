@@ -9,10 +9,12 @@ import AboutPage from '~/pages/AboutPage';
 import HomePage from '~/pages/HomePage';
 import ShopPage from '~/pages/ShopPage';
 import NotFoundPage from '~/routes/NotFound/NotFoundPage';
+import {setColorTheme} from '~/utils/setColorTheme';
 
+setColorTheme('light');
 const Line4Design: FC = () => {
   return (
-    <div className="line4Design-pg">
+    <div className="line4design-pg ">
       <BrowserRouter>
         <TopBar />
         <div className="line4Design-pg__container">
@@ -26,7 +28,6 @@ const Line4Design: FC = () => {
               <Route path="*" component={NotFoundPage} />
             </Switch>
           </div>
-
           <Footer />
         </div>
       </BrowserRouter>
