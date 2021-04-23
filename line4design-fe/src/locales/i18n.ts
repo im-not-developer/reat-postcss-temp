@@ -4,10 +4,16 @@ import {initReactI18next} from 'react-i18next';
 import {en} from './en';
 import {ko} from './ko';
 import {jp} from './jp';
-
+interface languageFullNameProps {
+  [key: string]: string;
+}
 export const languages = ['en', 'ko', 'jp'] as const;
-
-export type Languages = typeof languages[number]; // 'en' | 'ko'
+export const languageFullName: languageFullNameProps[] = [
+  {english: 'en'},
+  {korean: 'ko'},
+  {japanese: 'jp'},
+];
+export type Languages = typeof languages[number]; // 'en' | 'ko' | 'jp'
 
 const resources = {
   en: {translation: en},
