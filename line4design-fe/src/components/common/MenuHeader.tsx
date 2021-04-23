@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import TransLang from '~/components/commons/TransLang';
+import TransLang from '~/components/common/TransLang';
 
 const MenuHeader: FC = () => {
   const history = useHistory();

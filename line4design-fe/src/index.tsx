@@ -5,9 +5,11 @@ import AppPresenter from './AppPresenter';
 import './assets/css/index.css';
 import './locales/i18n';
 import reportWebVitals from './reportWebVitals';
+import GlobalStyle from './GlobalStyles';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <AppPresenter />
   </React.StrictMode>,
   document.getElementById('root'),

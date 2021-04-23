@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Footer from '~/components/commons/Footer';
-import Header from '~/components/commons/Header';
-import TopBar from '~/components/commons/TopBar';
-import MenuHeader from '~/components/commons/MenuHeader';
+import Footer from '~/components/common/Footer';
+import Header from '~/components/common/Header';
+import TopBar from '~/components/common/TopBar';
+import MenuHeader from '~/components/common/MenuHeader';
 import AboutPage from '~/pages/AboutPage';
 import HomePage from '~/pages/HomePage';
 import ShopPage from '~/pages/ShopPage';

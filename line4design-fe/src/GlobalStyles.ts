@@ -6,35 +6,39 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   /* Regular */
   @font-face {
-    font-family: 'Spartan';
-    font-weight: 400;
-    font-style: normal;
-    src: url(${require('./assets/fonts/Spartan-Regular.woff')}) format("woff"),
-    url(${require('./assets/fonts/Spartan-Regular.woff2')}) format("woff2");
+  font-family: 'Spartan';
+  font-weight: 400;
+  font-style: normal;
+  src: url(${require('./assets/fonts/Spartan-Regular.otf')}) format('truetype'),
+    url(${require('./assets/fonts/Spartan-Regular.woff')}) format('woff'),
+    url(${require('./assets/fonts/Spartan-Regular.woff2')}) format('woff2');
   }
   /* Medium */
   @font-face {
     font-family: 'Spartan';
     font-weight: 500;
     font-style: normal;
-    src: url(${require('./assets/fonts/Spartan-Regular.woff')}) format("woff"),
-     url(${require('./assets/fonts/Spartan-Regular.woff2')}) format("woff2");
+    src: url(${require('./assets/fonts/Spartan-Regular.otf')}) format('truetype'),
+    url(${require('./assets/fonts/Spartan-Regular.woff')}) format('woff'),
+    url(${require('./assets/fonts/Spartan-Regular.woff2')}) format('woff2');
   }
   /* SemiBold */
   @font-face {
     font-family: 'Spartan';
     font-weight: 600;
     font-style: normal;
-    src: url(${require('./assets/fonts/Spartan-SemiBold.woff')}) format("woff")
-    url(${require('./assets/fonts/Spartan-SemiBold.woff2')}) format("woff2");
+    src: url(${require('./assets/fonts/Spartan-SemiBold.otf')}) format('truetype'),
+    url(${require('./assets/fonts/Spartan-SemiBold.woff')}) format('woff'),
+    url(${require('./assets/fonts/Spartan-SemiBold.woff2')}) format('woff2');
   }
   /* Bold */
   @font-face {
     font-family: 'Spartan';
     font-weight: 700;
     font-style: normal;
-    src: url(${require('./assets/fonts/Spartan-Bold.woff')}) format("woff")
-    url(${require('./assets/fonts/Spartan-Bold.woff2')}) format("woff2");
+    src: url(${require('./assets/fonts/Spartan-Bold.otf')}) format('truetype'),
+      url(${require('./assets/fonts/Spartan-Bold.woff')}) format('woff'),
+      url(${require('./assets/fonts/Spartan-Bold.woff2')}) format('woff2');
   }
 
   ${reset};
@@ -54,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video , button, input,
   select, textarea {
-    font-family: 'Spartan', 'NotoSans', 'Roboto', 'sans-serif';
+    font-family: 'Spartan';
     word-break: break-all;
   }
   a {

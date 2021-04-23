@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import TransLang from '~/components/commons/TransLang';
+import TransLang from '~/components/common/TransLang';
 
 const Header: FC = () => {
   return (
