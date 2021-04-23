@@ -4,7 +4,8 @@ import {initReactI18next} from 'react-i18next';
 import {en} from './en';
 import {ko} from './ko';
 import {jp} from './jp';
-interface languageFullNameProps {
+
+export interface languageFullNameProps {
   [key: string]: string;
 }
 export const languages = ['en', 'ko', 'jp'] as const;
