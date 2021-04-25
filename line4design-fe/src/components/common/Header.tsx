@@ -40,7 +40,7 @@ const Header: FC = () => {
             {(menuList ?? []).map((m) => (
               <li key={m.id}>
                 <NoneLineButton
-                  fontSize={'25px'}
+                  fontSize={'24px'}
                   onClick={() => {
                     history.push(m.link);
                   }}>
@@ -50,32 +50,27 @@ const Header: FC = () => {
             ))}
           </ul>
         </div>
-      </div>
+        <div className="header__container__right">
+          <ul className="">
+            <li className="">
+              <button>
+                <TransLang text={'header.login'} />
+              </button>
+            </li>
+            <li className="">
+              <button>
+                <TransLang text={'header.signin'} />
+              </button>
+            </li>
 
-      {/* <div>
-        <ul className="list-disc space-y-2">
-          <li className="flex items-start">
-            <button>
-              <TransLang text={'header.login'} />
-            </button>
-          </li>
-          <li className="flex items-start">
-            <button>
-              <TransLang text={'header.signin'} />
-            </button>
-          </li>
-          <li className="flex items-start">
-            <button>
-              <TransLang text={'header.service_center'} />
-            </button>
-          </li>
-          <li className="flex items-start">
-            <button>
-              <TransLang text={'header.basket'} />
-            </button>
-          </li>
-        </ul>
-      </div> */}
+            <li className="">
+              <button>
+                <TransLang text={'header.basket'} />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
