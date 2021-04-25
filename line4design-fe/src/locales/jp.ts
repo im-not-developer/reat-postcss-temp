@@ -9,10 +9,9 @@ export const jp = {
   'header.service_center': `SERVICE CENTER`,
   'header.basket': `BASKET`,
 
-  'menu_header.home': `HOME`,
-  'menu_header.about': `ABOUT`,
-  'menu_header.shop': `SHOP`,
-  'menu_header.special': `SPECIAL`,
+  'header.menu.aboutus': `About Us`,
+  'header.menu.shop': `Shop`,
+  'header.menu.contact': `Contact`,
 
   'product_card_slider.new': `NEW`,
   'product_card_slider.discount': `DISCOUNT`,

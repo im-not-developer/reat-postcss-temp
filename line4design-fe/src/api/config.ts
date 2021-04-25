@@ -1,13 +1,27 @@
-/** @format */
+import {ConfigTypes} from './types';
 
-const config = () => {
-  const env = process.env.NODE_ENV;
-  const baseUrl = process.env.REACT_APP_BASE_URL;
-
-  return {
-    env,
-    baseUrl
-  };
+export const defaultConfig: ConfigTypes = {
+  language: {
+    longLanguage: 'ENGLISH',
+    shortLanguage: 'en',
+  },
 };
 
-export default config();
+export const Base = {
+  config: defaultConfig,
+};
+declare global {
+  interface Window {
+    env: ConfigTypes;
+  }
+}
+
+window.env = window.env || defaultConfig;
+
+Base.config = {...window.env};
+
+export const shortLanguage = (): string =>
+  Base.config.language.shortLanguage || '';
+
+export const longLanguage = (): string =>
+  Base.config.language.longLanguage || '';

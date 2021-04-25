@@ -1,11 +1,10 @@
 import React, {FC, useContext, useState, useMemo} from 'react';
 
-import {EmailIcon} from '~/assets/imgs/components/email_icon';
+import {shortLanguage, longLanguage} from '~/api/config';
+import {EmailIcon} from '~/assets/imgs/components/EmailIcon';
+import {GlobeIcon} from '~/assets/imgs/components/GlobeIcon';
 import {languageFullName} from '~/locales/i18n';
 import {LocaleContext} from '~/providers/LocaleProvider';
-
-const INIT_FULL_LANG = 'ENGLISH';
-const INIT_SHORT_LANG = 'en';
 
 const TopBar: FC = () => {
   const [view, setView] = useState(false);
@@ -15,7 +14,7 @@ const TopBar: FC = () => {
     const langObj = (languageFullName ?? []).filter(
       (l) => Object.values(l)[0] === locale,
     );
-    return Object.keys(langObj[0])[0] ?? INIT_FULL_LANG;
+    return Object.keys(langObj[0])[0] ?? longLanguage();
   }, [locale]);
 
   return (
@@ -26,13 +25,17 @@ const TopBar: FC = () => {
           <span className="body_text">dev.luyoes20@gmail.com</span>
         </div>
         <div className="topbar_pg__container__language">
-          <div
-            className="body_bold mouse_over"
-            onClick={() => {
-              setView(!view);
-            }}>
-            {viewLocal?.toUpperCase() ?? INIT_FULL_LANG}
+          <div className="topbar_pg__container__language__viewlang mouse_over">
+            <GlobeIcon width={'27px'} height={'27px'} stockColor="#ffffff" />
+            <div
+              className="body_bold"
+              onClick={() => {
+                setView(!view);
+              }}>
+              {viewLocal?.toUpperCase() ?? longLanguage()}
+            </div>
           </div>
+
           {view && (
             <ul className="topbar_pg__container__language__select">
               {(languageFullName ?? []).map((l, idx) => {
@@ -43,11 +46,11 @@ const TopBar: FC = () => {
                     className="topbar_pg__container__language__select--row"
                     key={idx}
                     onClick={() => {
-                      handleChangeLanguage(langValue ?? INIT_SHORT_LANG);
+                      handleChangeLanguage(langValue ?? shortLanguage());
                       setView(false);
                     }}>
-                    <div className="body_bold">
-                      {langKey?.toUpperCase() ?? INIT_FULL_LANG}
+                    <div className="body_bold mouse_over">
+                      {langKey?.toUpperCase() ?? longLanguage()}
                     </div>
                   </li>
                 );
