@@ -11,7 +11,7 @@ interface NoneLineButtonProps {
 
 const WrapDiv = styled.div`
   display: block;
-  margin: 0px 30px 0px 0px;
+  margin: 0px 0px 0px 0px;
 `;
 
 const Button = styled.button<{fontSize?: string}>`

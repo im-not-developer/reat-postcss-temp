@@ -21,11 +21,13 @@ html,
 .topbar_pg__container__contact,
 .topbar_pg__container__language,
 .header__container__left,
+.header__container__center,
 .topbar_pg__container__contact svg,
 .topbar_pg__container__contact .body_text,
 .topbar_pg__container__language__viewlang,
 .topbar_pg__container__language__select,
 .header__container__center__menus,
+.header__container__right > ul,
 .topbar_pg__container__language__viewlang .body_bold,
 .topbar_pg__container__language__viewlang > svg {
     font-size: var(--font-size);
@@ -77,7 +79,7 @@ dark-mode {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
+  /* line-height: 24px; */
   letter-spacing: 0.06em;
 }
 .title_s {
@@ -86,7 +88,7 @@ dark-mode {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 22px;
+  /* line-height: 22px; */
   letter-spacing: 0.06em;
 }
 .subtitle {
@@ -95,7 +97,7 @@ dark-mode {
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 18px;
+  /* line-height: 18px; */
   letter-spacing: 0.06em;
 }
 /* SemiBold End */
@@ -107,7 +109,7 @@ dark-mode {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 22px;
+  /* line-height: 22px; */
 }
 /* Regular End */
 /* ------------------------ */
@@ -117,7 +119,7 @@ dark-mode {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 22px;
+  /* line-height: 22px; */
 }
 /* Bold End */
 /* ------------------------ */
@@ -128,14 +130,14 @@ dark-mode {
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
-  line-height: 18px;
+  /* line-height: 18px; */
 }
 .botton_text {
   font-family: Spartan;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
-  line-height: 15px;
+  /* line-height: 15px; */
   letter-spacing: 0.06em;
 }
 /* Medium End */
@@ -272,7 +274,21 @@ dark-mode {
   }
 .header__container__left {
     }
+.header__container__center {
+      width: 40%;
+    }
 .header__container__center__menus {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+                flex-direction: row;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+        width: 100%;
+      }
+.header__container__right > ul {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-direction: row;
