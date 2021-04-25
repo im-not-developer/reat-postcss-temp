@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, {createContext, FC, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 
-import {Languages, languageFullName} from '~/locales/i18n';
+import {Languages} from '~/locales/i18n';
 
 export type LocaleContextState = {
   locale: string;

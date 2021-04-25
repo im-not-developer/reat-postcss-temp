@@ -11,18 +11,23 @@
 .light-mode,
 .dark-mode,
 .topbar_pg,
+.header,
 .line4design-pg,
 body,
 html,
 .topbar_pg__container,
+.header__container,
 .line4design-pg__container,
 .topbar_pg__container__contact,
 .topbar_pg__container__language,
+.header__container__left,
 .topbar_pg__container__contact svg,
 .topbar_pg__container__contact .body_text,
-.topbar_pg__container__language .body_bold,
-.topbar_pg__container__language .mouse_over,
-.topbar_pg__container__language__select {
+.topbar_pg__container__language__viewlang,
+.topbar_pg__container__language__select,
+.header__container__center__menus,
+.topbar_pg__container__language__viewlang .body_bold,
+.topbar_pg__container__language__viewlang > svg {
     font-size: var(--font-size);
     font-family: var(--font-family);
 }
@@ -32,7 +37,8 @@ html,
   }
 :root,
 .light-mode {
-  --background-color: var(--light-dark-color);
+  --background-topbar-color: var(--light-topbar-dark-color);
+  --background-header-color: var(--light-);
 }
 :root,
 dark-mode {
@@ -134,9 +140,15 @@ dark-mode {
 }
 /* Medium End */
 .light-mode {
-  --light-dark-color: #121212;
+  /* background color */
+  --light-topbar-dark-color: #121212;
+  --light-header-white: #ffffff;
+
+  /* typography */
   --light-text-black-color: #121212;
   --light-text-white-color: #ffffff;
+
+  /* line */
   --light-line-light-gray-color: #e5e5e5;
 }
 .dark-mode {
@@ -149,7 +161,7 @@ dark-mode {
   -webkit-align-items: center;
           align-items: center;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--background-topbar-color);
   /* __container end */
 }
 .topbar_pg__container {
@@ -162,9 +174,9 @@ dark-mode {
     -webkit-justify-content: space-between;
             justify-content: space-between;
     width: 100%;
+    max-width: var(--page-max-width);
     height: 40px;
     padding: 0px 70px 0px 20px;
-    max-width: var(--page-max-width);
     /* __language end */
   }
 .topbar_pg__container__contact {
@@ -191,17 +203,27 @@ dark-mode {
       left: 0;
       top: 0;
     }
-.topbar_pg__container__language .body_bold {
-        color: var(--light-text-white-color);
+.topbar_pg__container__language__viewlang {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+                flex-direction: row;
+        -webkit-align-items: center;
+                align-items: center;
       }
-.topbar_pg__container__language .mouse_over {
-      }
+.topbar_pg__container__language__viewlang .body_bold {
+          color: var(--light-text-white-color);
+        }
+.topbar_pg__container__language__viewlang > svg {
+          margin: 0px 10px 0px 0px;
+        }
 .topbar_pg__container__language__select {
-        width: 100px;
+        width: -webkit-max-content;
+        width: max-content;
         background-color: #ffffff;
         border: 1px solid var(--light-line-light-gray-color);
         position: absolute;
-        top: 32px;
+        top: 35px;
         right: 0;
         /* --row end */
       }
@@ -220,6 +242,42 @@ dark-mode {
             color: var(--light-text-black-color);
             text-align: center;
           }
+@media screen and (max-width: 768px) {
+  .topbar_pg {
+  }
+}
+.header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 100%;
+  background-color: var(--background-header-color);
+  border-bottom: 1px solid var(--light-line-light-gray-color);
+}
+.header__container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    width: 100%;
+    max-width: var(--page-max-width);
+    padding: 20px 70px 20px 20px;
+  }
+.header__container__left {
+    }
+.header__container__center__menus {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+                flex-direction: row;
+      }
 /* LINE4DESIGN CUSTOM PCSS FILE */
 .line4design-pg {
   display: -webkit-flex;

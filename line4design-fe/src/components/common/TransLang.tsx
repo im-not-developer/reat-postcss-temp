@@ -10,10 +10,10 @@ export interface TransLangPropsTypes {
 
 type Props = TransLangPropsTypes;
 
-const TransLang: React.FC<Props> = ({className = '', text = ''}) => {
+const TransLang: React.FC<Props> = ({className = 'body_text', text = ''}) => {
   const {viewTransLang} = useContext(LocaleContext);
   return (
-    <div className={classNames(`${className}`)}>
+    <div className={classNames(`translang ${className}`)}>
       {viewTransLang(text ?? '')}
     </div>
   );

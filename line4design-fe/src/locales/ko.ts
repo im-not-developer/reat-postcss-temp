@@ -9,10 +9,9 @@ export const ko = {
   'header.service_center': `고객센터`,
   'header.basket': `장바구니`,
 
-  'menu_header.home': `홈`,
-  'menu_header.about': `소개`,
-  'menu_header.shop': `매장`,
-  'menu_header.special': `스페셜`,
+  'header.menu.aboutus': `About Us`,
+  'header.menu.shop': `Shop`,
+  'header.menu.contact': `Contact`,
 
   'product_card_slider.new': `신상품`,
   'product_card_slider.discount': `할인`,

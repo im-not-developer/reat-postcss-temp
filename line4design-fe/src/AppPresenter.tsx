@@ -4,7 +4,6 @@ import {SWRConfig} from 'swr';
 import Line4Design from './Line4Design';
 import LocaleProvider from './providers/LocaleProvider';
 
-
 const AppPresenter: FC = () => {
   return (
     <SWRConfig
