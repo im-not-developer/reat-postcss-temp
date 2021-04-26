@@ -53,9 +53,9 @@ const Header: FC = () => {
         <div className="header__container__right">
           <ul className="">
             <li className="">
-              <button>
+              <NoneLineButton fontSize={'24px'}>
                 <TransLang text={'header.login'} />
-              </button>
+              </NoneLineButton>
             </li>
             <li className="">
               <button>
@@ -64,9 +64,9 @@ const Header: FC = () => {
             </li>
 
             <li className="">
-              <button>
+              <NoneLineButton fontSize={'24px'}>
                 <TransLang text={'header.basket'} />
-              </button>
+              </NoneLineButton>
             </li>
           </ul>
         </div>
