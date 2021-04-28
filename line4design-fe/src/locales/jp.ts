@@ -4,10 +4,11 @@ export const jp = {
   'header.category': `CATEGORY`,
   'header.brand': `BRAND`,
   'header.search': `SEARCH`,
-  'header.login': `LOGIN`,
-  'header.signin': `SIGN IN`,
-  'header.service_center': `SERVICE CENTER`,
-  'header.basket': `BASKET`,
+
+  'header.control.login': `LOGIN`,
+  'header.control.signin': `SIGN IN`,
+  'header.control.service_center': `CONTACT`,
+  'header.control.basket': `SHOPPING BAG`,
 
   'header.menu.aboutus': `About Us`,
   'header.menu.shop': `Shop`,

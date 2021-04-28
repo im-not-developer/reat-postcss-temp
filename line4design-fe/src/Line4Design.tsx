@@ -26,8 +26,8 @@ const Line4Design: FC = () => {
             <Route path="/shop" exact={true} component={ShopPage} />
             <Route path="*" component={NotFoundPage} />
           </Switch>
-          <Footer />
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
