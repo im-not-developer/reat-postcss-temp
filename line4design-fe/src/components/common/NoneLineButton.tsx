@@ -5,6 +5,7 @@ import styled from 'styled-components';
 interface NoneLineButtonProps {
   className?: string;
   children?: ReactNode;
+  fontFamilyClass?: string;
   fontSize?: string;
   onClick?(): void;
 }
@@ -25,6 +26,7 @@ const Button = styled.button<{fontSize?: string}>`
 const NoneLineButton: FC<NoneLineButtonProps> = ({
   className = '',
   children,
+  fontFamilyClass = '',
   fontSize = '18px',
   onClick,
 }) => {
@@ -34,7 +36,9 @@ const NoneLineButton: FC<NoneLineButtonProps> = ({
       onClick={() => {
         onClick?.();
       }}>
-      <Button fontSize={fontSize}>{children}</Button>
+      <Button className={fontFamilyClass} fontSize={fontSize}>
+        {children}
+      </Button>
     </WrapDiv>
   );
 };
