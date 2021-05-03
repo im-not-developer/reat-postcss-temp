@@ -21,20 +21,31 @@ const Footer: FC = () => {
     <>
       <div className="footer">
         <div className="footer__container">
-          <div className="footer__container__header">Contact</div>
+          <div className="footer__container__header title_l">Contact</div>
           <div className="footer__container__body">
-            <div>
-              <LineMailIcon /> <div>line4design@gmail.com</div>
+            <div className="footer__container__body__section">
+              <LineMailIcon />
+              <div className="footer__container__body__section--text body_text">
+                line4design@gmail.com
+              </div>
             </div>
-            <div>
-              <LocationMarkerIcon /> <div>Seoul, R.Korea</div>
+            <div className="footer__container__body__section">
+              <LocationMarkerIcon />
+              <div className="footer__container__body__section--text body_text">
+                Seoul, R.Korea
+              </div>
             </div>
-            <div>
+            <div className="footer__container__body__section">
               <PhoneIcon />
-              <div>02.0202.0202</div>
+              <div className="footer__container__body__section--text body_text">
+                02.0202.0202
+              </div>
             </div>
-            <div>
-              <ClockIcon /> <div>am 10:00 ~ pm 06:00</div>
+            <div className="footer__container__body__section">
+              <ClockIcon />
+              <div className="footer__container__body__section--text body_text">
+                am 10:00 ~ pm 06:00
+              </div>
             </div>
           </div>
         </div>
