@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 
-interface ShoppingBagIconType {
+interface UserIconIconType {
   stockColor?: string;
   width?: string;
   height?: string;
 }
-export const ShoppingBagIcon: FC<ShoppingBagIconType> = ({
+export const UserIcon: FC<UserIconIconType> = ({
   stockColor = '#121212',
   width = '24',
   height = '24px',
