@@ -14,6 +14,7 @@
 .header,
 .footer,
 .bottom_bar,
+.ImageSlider,
 .line4design-pg,
 body,
 html,
@@ -362,6 +363,8 @@ dark-mode {
     max-width: var(--page-max-width);
     padding: 20px 40px;
   }
+.ImageSlider {
+}
 /* LINE4DESIGN CUSTOM PCSS FILE */
 .line4design-pg {
   display: -webkit-flex;
