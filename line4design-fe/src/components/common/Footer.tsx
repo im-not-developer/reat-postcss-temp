@@ -25,25 +25,25 @@ const Footer: FC = () => {
           <div className="footer__container__body">
             <div className="footer__container__body__section">
               <LineMailIcon />
-              <div className="footer__container__body__section--text body_text">
+              <div className="footer__container__body__section--text">
                 line4design@gmail.com
               </div>
             </div>
             <div className="footer__container__body__section">
               <LocationMarkerIcon />
-              <div className="footer__container__body__section--text body_text">
+              <div className="footer__container__body__section--text">
                 Seoul, R.Korea
               </div>
             </div>
             <div className="footer__container__body__section">
               <PhoneIcon />
-              <div className="footer__container__body__section--text body_text">
+              <div className="footer__container__body__section--text">
                 02.0202.0202
               </div>
             </div>
             <div className="footer__container__body__section">
               <ClockIcon />
-              <div className="footer__container__body__section--text body_text">
+              <div className="footer__container__body__section--text">
                 am 10:00 ~ pm 06:00
               </div>
             </div>
