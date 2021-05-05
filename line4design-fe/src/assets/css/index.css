@@ -184,7 +184,7 @@ dark-mode {
     width: 100%;
     max-width: var(--page-max-width);
     height: 40px;
-    padding: 20px 70px;
+    padding: 5px 70px;
     /* __language end */
   }
 .topbar_pg__container__contact {

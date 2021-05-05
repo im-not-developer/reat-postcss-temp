@@ -12,7 +12,7 @@ const Header: FC = () => {
     <div className="header">
       <div className="header__container">
         <div className="header__container__left">
-          <Line4DesignLogo width="auto" height="80px" />
+          <Line4DesignLogo height="80px" />
         </div>
         <div className="header__container__center">
           <ul className="header__container__center__menus">

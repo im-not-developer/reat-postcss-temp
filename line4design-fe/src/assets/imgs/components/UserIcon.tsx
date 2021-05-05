@@ -7,7 +7,7 @@ interface UserIconIconType {
 }
 export const UserIcon: FC<UserIconIconType> = ({
   stockColor = '#121212',
-  width = '24',
+  width = '24px',
   height = '24px',
 }) => {
   return (

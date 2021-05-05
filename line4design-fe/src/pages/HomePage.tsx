@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 const HomePage: FC = () => (
   <div className="home_pg">
-    <div>home page</div>
+    <div className="home_pg__container"></div>
   </div>
 );
 
