@@ -6,3 +6,4 @@ export * from './UserIcon';
 export * from './ShoppingBagIcon';
 export * from './LocationMarkerIcon';
 export * from './LineMailIcon';
+export * from './BigArrow';
