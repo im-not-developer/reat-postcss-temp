@@ -13,11 +13,22 @@ const ImageSliderDiv = styled.div`
   border: 1px solid red;
 `;
 
+const Image = styled.img``;
+
 const ImageSlider: FC<ImageSliderProps> = ({images = []}) => {
-  console.log(images);
   return (
     <ImageSliderDiv className="imageslider">
-      <div className="imageslider__container"></div>
+      <div className="imageslider__container">
+        {(images ?? []).map((item, idx) => {
+          const imageSrc = item?.imagePath + item?.fileName;
+          console.log(imageSrc);
+          return (
+            <div key={item?.id ?? idx}>
+              <img src={require(`${imageSrc}`)} />
+            </div>
+          );
+        })}
+      </div>
     </ImageSliderDiv>
   );
 };
