@@ -36,6 +36,7 @@
   "typeRoots": [
     "./node_modules/@types",
     "./@types",
-    "src/@types"
+    "src/@types",
+    "src/@types/images.d.ts"
   ]
 }
