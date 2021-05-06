@@ -24,6 +24,7 @@
   "extends": "./tsconfig-path.json",
   "include": [
     "src",
+    "src/**/*.tsx",
     "src/assets",
     "src/locales/*.ts"
   ],
@@ -31,5 +32,10 @@
     "node_modules",
     "build",
     "scripts"
+  ],
+  "typeRoots": [
+    "./node_modules/@types",
+    "./@types",
+    "src/@types"
   ]
 }

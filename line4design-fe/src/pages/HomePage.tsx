@@ -1,12 +1,11 @@
 import React, {FC} from 'react';
 
-import ImageSlider from '~/components/ImageSlider';
+import MainBanner from '~/components/MainBanner';
 
 const HomePage: FC = () => (
   <div className="home_pg">
     <div className="home_pg__container">
-      dd
-      <ImageSlider />
+      <MainBanner />
     </div>
   </div>
 );
