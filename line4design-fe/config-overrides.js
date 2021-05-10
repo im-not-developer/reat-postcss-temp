@@ -1,12 +1,11 @@
 /** @format */
-// const postcssNested = require('postcss-nested');
-// const postcssNesting = require('postcss-nesting');
-// const reactAppRewirePostcss = require('react-app-rewire-postcss');
 const {
   useBabelRc,
   addWebpackAlias,
   addBundleVisualizer,
-  override
+  override,
+  addWebpackPlugin,
+  setWebpackPublicPath,
 } = require('customize-cra');
 const rewireReactHotLoader = require('react-app-rewire-hot-loader-for-customize-cra');
 
@@ -14,17 +13,15 @@ module.exports = override(
   useBabelRc(),
   rewireReactHotLoader(),
   addWebpackAlias({
-    // 'react-dom': '@hot-loader/react-dom',
-    // 'react-dom$': 'react-dom/profiling',
-    // 'scheduler/tracing': 'scheduler/tracing-profiling',
-    '~': require('path').resolve(__dirname, 'src')
+    '~': require('path').resolve(__dirname, 'src'),
   }),
   addBundleVisualizer(
     {
       analyzerMode: 'static',
-      reportFilename: 'report.html'
+      reportFilename: 'report.html',
     },
-    true
-  )
+    true,
+  ),
+  setWebpackPublicPath(),
   // reactAppRewirePostcss(config, {})
 );

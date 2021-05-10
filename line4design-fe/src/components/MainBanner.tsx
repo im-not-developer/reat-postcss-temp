@@ -8,18 +8,15 @@ interface Props {}
 const _carouselImages: carouselImagesTypes[] = [
   {
     id: 0,
-    imagePath: '~/assets/imgs/samples',
-    fileName: '/sample_1.jpg',
+    imagePath: require('../assets/imgs/samples/sample_3.jpg').default,
   },
   {
     id: 1,
-    imagePath: '~/assets/imgs/samples',
-    fileName: '/sample_2.jpg',
+    imagePath: require('../assets/imgs/samples/sample_2.jpg').default,
   },
   {
     id: 2,
-    imagePath: '~/assets/imgs/samples',
-    fileName: '/sample_3.jpg',
+    imagePath: require('../assets/imgs/samples/sample_3.jpg').default,
   },
 ];
 const MainBanner = (props: Props) => {
