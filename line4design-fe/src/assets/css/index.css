@@ -21,7 +21,8 @@ html,
 .header__container,
 .footer__container,
 .bottom_bar__container,
-.imageslider__container,
+.mainbanner__container,
+.home_pg__container,
 .line4design-pg__container,
 .topbar_pg__container__contact,
 .topbar_pg__container__language,
@@ -363,7 +364,9 @@ dark-mode {
     max-width: var(--page-max-width);
     padding: 20px 40px;
   }
-.imageslider__container {
+.mainbanner__container {
+  }
+.home_pg__container {
   }
 /* LINE4DESIGN CUSTOM PCSS FILE */
 .line4design-pg {

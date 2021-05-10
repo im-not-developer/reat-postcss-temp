@@ -5,30 +5,41 @@ import {carouselImagesTypes} from '~/@types/api';
 
 interface ImageSliderProps {
   images: carouselImagesTypes[];
+  maxWidth?: string;
 }
 
-const ImageSliderDiv = styled.div`
-  width: 100px;
-  height: 100px;
-  border: 1px solid red;
+const ImageSliderDiv = styled.div<{maxWidth?: string}>`
+  display: flex;
+  width: 100%;
+  max-width: ${(props) => props.maxWidth};
 `;
 
-const Image = styled.img``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
 
-const ImageSlider: FC<ImageSliderProps> = ({images = []}) => {
+const Image = styled.img`
+  width: 500px;
+  height: auto;
+`;
+
+const ImageSlider: FC<ImageSliderProps> = ({
+  images = [],
+  maxWidth = '500px',
+}) => {
   return (
-    <ImageSliderDiv className="imageslider">
-      <div className="imageslider__container">
+    <ImageSliderDiv maxWidth={maxWidth}>
+      <Container>
         {(images ?? []).map((item, idx) => {
-          const imageSrc = item?.imagePath + item?.fileName;
-          console.log(imageSrc);
           return (
             <div key={item?.id ?? idx}>
-              <img src={require(`${imageSrc}`)} />
+              <Image src={item?.imagePath} alt={`${idx}`} />
             </div>
           );
         })}
-      </div>
+      </Container>
     </ImageSliderDiv>
   );
 };
