@@ -5,13 +5,20 @@ import {carouselImagesTypes} from '~/@types/api';
 
 interface ImageSliderProps {
   images: carouselImagesTypes[];
-  maxWidth?: string;
+  sliderMaxWidth?: string;
+  sliderPadding?: string;
 }
 
-const ImageSliderDiv = styled.div<{maxWidth?: string}>`
+const ImageSliderDiv = styled.div<{
+  sliderMaxWidth?: string;
+  sliderPadding?: string;
+}>`
   display: flex;
   width: 100%;
-  max-width: ${(props) => props.maxWidth};
+  max-width: ${(props) => props.sliderMaxWidth};
+  overflow: hidden;
+  border: 5px solid #e4e4e4;
+  padding: ${(props) => props.sliderPadding};
 `;
 
 const Container = styled.div`
@@ -21,16 +28,19 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  width: 500px;
+  width: 1000px;
   height: auto;
 `;
 
 const ImageSlider: FC<ImageSliderProps> = ({
   images = [],
-  maxWidth = '500px',
+  sliderMaxWidth = '1000px',
+  sliderPadding = '0px 0px 0px 0px',
 }) => {
   return (
-    <ImageSliderDiv maxWidth={maxWidth}>
+    <ImageSliderDiv
+      sliderMaxWidth={sliderMaxWidth}
+      sliderPadding={sliderPadding}>
       <Container>
         {(images ?? []).map((item, idx) => {
           return (

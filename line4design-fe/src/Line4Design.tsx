@@ -19,7 +19,7 @@ const Line4Design: FC = () => {
       <BrowserRouter>
         <TopBar />
         <Header />
-        <div className="line4Design-pg__container">
+        <div className="line4design-pg__container">
           <Switch>
             <Route path="/" exact={true} component={HomePage} />
             <Route path="/about" exact={true} component={AboutPage} />

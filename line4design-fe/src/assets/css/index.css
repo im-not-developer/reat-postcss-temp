@@ -14,6 +14,8 @@
 .header,
 .footer,
 .bottom_bar,
+.mainbanner,
+.home_pg,
 .line4design-pg,
 body,
 html,
@@ -364,8 +366,15 @@ dark-mode {
     max-width: var(--page-max-width);
     padding: 20px 40px;
   }
+.mainbanner {
+  display: block;
+  width: 100%;
+}
 .mainbanner__container {
   }
+.home_pg {
+  width: 100%;
+}
 .home_pg__container {
   }
 /* LINE4DESIGN CUSTOM PCSS FILE */
@@ -379,6 +388,7 @@ dark-mode {
   width: 100%;
 }
 .line4design-pg__container {
+    width: 100%;
   }
 :root {
   /* typography */
