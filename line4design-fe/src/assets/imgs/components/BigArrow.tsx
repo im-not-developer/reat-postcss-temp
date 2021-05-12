@@ -1,17 +1,26 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
 
 interface BigArrowProps {
   side?: string;
+  width?: string;
+  height?: string;
 }
 
-const BigArrow: FC<BigArrowProps> = ({side = 'left'}) => {
-  if (side === 'left') {
+const BigArrow: FC<BigArrowProps> = ({
+  side = 'left',
+  width = '9px',
+  height = '16px',
+}) => {
+  console.log();
+  const widthNumber = useMemo(() => width.split('px')[0], [width]);
+  const heightNumber = useMemo(() => height.split('px')[0], [height]);
+  if (side.toLowerCase() === 'left') {
     // left arrow
     return (
       <svg
-        width="9"
-        height="16"
-        viewBox="0 0 9 16"
+        width={width}
+        height={height}
+        viewBox={`0 0 ${widthNumber} ${heightNumber}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -26,9 +35,9 @@ const BigArrow: FC<BigArrowProps> = ({side = 'left'}) => {
     // right arrow
     return (
       <svg
-        width="9"
-        height="16"
-        viewBox="0 0 9 16"
+        width={width}
+        height={height}
+        viewBox={`0 0 ${widthNumber} ${heightNumber}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
