@@ -240,9 +240,12 @@ dark-mode {
         /* --row end */
       }
 .topbar_pg__container__language__select--row {
-          /* display: flex;
-          flex-direction: column;
-          justify-content: center; */
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-direction: column;
+                  flex-direction: column;
+          -webkit-justify-content: center;
+                  justify-content: center;
           height: 30px;
           padding: 0px 10px 0px 10px;
           border-bottom: 1px solid var(--light-line-light-gray-color);

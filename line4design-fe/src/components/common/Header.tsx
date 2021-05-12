@@ -20,7 +20,7 @@ const Header: FC = () => {
               <li key={m.id}>
                 <NoneLineButton
                   fontFamilyClass="body_text"
-                  fontSize={'24px'}
+                  fontSize={'18px'}
                   onClick={() => {
                     history.push(m.link);
                   }}>
@@ -36,6 +36,7 @@ const Header: FC = () => {
               <li key={m.id}>
                 <NoneLineButton
                   fontFamilyClass="small-text"
+                  fontSize={'14px'}
                   onClick={() => {
                     history.push(m.link);
                   }}>
